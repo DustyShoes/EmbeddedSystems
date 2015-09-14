@@ -1,0 +1,25 @@
+|Lab2Problem2
+Select[0] => ~NO_FANOUT~
+Select[1] => ~NO_FANOUT~
+Select[2] => ~NO_FANOUT~
+A[0] => xorAB[0].IN0
+A[1] => xorAB[1].IN0
+A[2] => xorAB[2].IN0
+A[3] => xorAB[3].IN0
+B[0] => xorAB[0].IN1
+B[1] => xorAB[1].IN1
+B[2] => xorAB[2].IN1
+B[3] => xorAB[3].IN1
+C[0] => ~NO_FANOUT~
+C[1] => ~NO_FANOUT~
+C[2] => ~NO_FANOUT~
+C[3] => ~NO_FANOUT~
+RegOut[0] << xorAB[0].DB_MAX_OUTPUT_PORT_TYPE
+RegOut[1] << xorAB[1].DB_MAX_OUTPUT_PORT_TYPE
+RegOut[2] << xorAB[2].DB_MAX_OUTPUT_PORT_TYPE
+RegOut[3] << xorAB[3].DB_MAX_OUTPUT_PORT_TYPE
+Carryout << <GND>
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+
+
