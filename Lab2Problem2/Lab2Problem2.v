@@ -36,14 +36,14 @@ wire seven;
 not (nSelect[0], Select[0]);
 not (nSelect[1], Select[1]);
 not (nSelect[2], Select[2]);
-and #10 (zero, nSelect0, nSelect1, nSelect2);
-and #10 (one, nSelect0, nSelect1, Select2);
-and #10 (two, nSelect0, Select1, nSelect2);
-and #10 (three, nSelect0, Select1, Select2);
-and #10 (four, nSelect0, nSelect1, nSelect2);
-and #10 (five, nSelect0, nSelect1, Select2);
-and #10 (six, nSelect0, Select1, nSelect2);
-and #10 (seven, nSelect0, Select1, Select2);
+and #10 (zero, nSelect[0], nSelect[1], nSelect[2]);
+and #10 (one, nSelect[0], nSelect[1], Select[2]);
+and #10 (two, nSelect[0], Select[1], nSelect[2]);
+and #10 (three, nSelect[0], Select[1], Select[2]);
+and #10 (four, nSelect[0], nSelect[1], nSelect[2]);
+and #10 (five, nSelect[0], nSelect[1], Select[2]);
+and #10 (six, nSelect[0], Select[1], nSelect[2]);
+and #10 (seven, nSelect[0], Select[1], Select[2]);
 
 //mode zero 000 - not A
 wire RegOutZero[3:0];
@@ -63,26 +63,26 @@ wire sumAB[3:0];
 wire carryAB;
 wire sumABC[3:0];
 wire carryABC;
-//TODO: FINISH THIS
-//fulladder fulladderAB (
-//	s (sumAB),
-//	co (carryAB),
-//	a (A),
-//	b (B),
-//	ci (0)
-//);
-//fulladder fulladderABC (
-//	s (sumABC),
-//	co (carryABC),
-//	a (sumAB),
-//	b (C),
-//	ci (carryAB)
-//);
-and #100 (RegOutOne[0], sumABC[0], one);
-and #100 (RegOutOne[1], sumABC[1], one);
-and #100 (RegOutOne[2], sumABC[2], one);
-and #100 (RegOutOne[3], sumABC[3], one);
-and #100 (CarryoutOne, carryABC, one);
+wire CarryoutOne;
+fulladder3bits fulladderAB (
+	A,
+	B,
+	0,
+	carryAB,
+	sumAB
+);
+fulladder3bits #100 fulladderABC (
+	sumAB,
+	C,
+	carryAB,
+	CarryoutOne,
+	RegOutOne
+);
+and #200 (RegOutOne[0], sumABC[0], one);
+and #200 (RegOutOne[1], sumABC[1], one);
+and #200 (RegOutOne[2], sumABC[2], one);
+and #200 (RegOutOne[3], sumABC[3], one);
+and #200 (CarryoutOne, carryABC, one);
 
 //mode two 010 - A and B
 wire RegOutTwo[3:0];
@@ -143,10 +143,10 @@ and #20 (RegOutSeven[1], 1, seven);
 and #20 (RegOutSeven[2], 1, seven);
 and #20 (RegOutSeven[3], 1, seven);
 
-or #200 (RegOut[0], RegOutZero[0], RegOutOne[0], RegOutTwo[0], RegOutThree[0], RegOutFour[0], RegOutFive[0], RegOutSix[0], RegOutSeven[0]);
-or #200 (RegOut[1], RegOutZero[1], RegOutOne[1], RegOutTwo[1], RegOutThree[1], RegOutFour[1], RegOutFive[1], RegOutSix[1], RegOutSeven[1]);
-or #200 (RegOut[2], RegOutZero[2], RegOutOne[2], RegOutTwo[2], RegOutThree[2], RegOutFour[2], RegOutFive[2], RegOutSix[2], RegOutSeven[2]);
-or #200 (RegOut[3], RegOutZero[3], RegOutOne[3], RegOutTwo[3], RegOutThree[3], RegOutFour[3], RegOutFive[3], RegOutSix[3], RegOutSeven[3]);
-or #200 (Carryout, CarryoutOne, CarryoutFive);
+or #210 (RegOut[0], RegOutZero[0], RegOutOne[0], RegOutTwo[0], RegOutThree[0], RegOutFour[0], RegOutFive[0], RegOutSix[0], RegOutSeven[0]);
+or #210 (RegOut[1], RegOutZero[1], RegOutOne[1], RegOutTwo[1], RegOutThree[1], RegOutFour[1], RegOutFive[1], RegOutSix[1], RegOutSeven[1]);
+or #210 (RegOut[2], RegOutZero[2], RegOutOne[2], RegOutTwo[2], RegOutThree[2], RegOutFour[2], RegOutFive[2], RegOutSix[2], RegOutSeven[2]);
+or #210 (RegOut[3], RegOutZero[3], RegOutOne[3], RegOutTwo[3], RegOutThree[3], RegOutFour[3], RegOutFive[3], RegOutSix[3], RegOutSeven[3]);
+or #210 (Carryout, CarryoutOne, CarryoutFive);
 
 endmodule
