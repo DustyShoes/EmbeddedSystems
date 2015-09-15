@@ -31,7 +31,7 @@ begin
 		end
 		B = ~B;
 	end
-	A <= ~A;
+	cin = ~cin;
 	
 	$display($time, "A, B, cin = %h", A, " %h", B, " %h", cin);
 	#100
