@@ -53,11 +53,11 @@ C[0] => RegOutFive[0].IN1
 C[1] => ~NO_FANOUT~
 C[2] => ~NO_FANOUT~
 C[3] => ~NO_FANOUT~
-RegOut[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Carryout <= CarryoutFive.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[0] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[1] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[2] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Carryout << CarryoutFive.DB_MAX_OUTPUT_PORT_TYPE
 clock => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 

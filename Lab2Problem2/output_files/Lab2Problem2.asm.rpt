@@ -1,5 +1,5 @@
 Assembler report for Lab2Problem2
-Mon Sep 14 08:34:44 2015
+Mon Sep 14 19:48:15 2015
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Sep 14 08:34:44 2015 ;
+; Assembler Status      ; Successful - Mon Sep 14 19:48:15 2015 ;
 ; Revision Name         ; Lab2Problem2                          ;
 ; Top-level Entity Name ; Lab2Problem2                          ;
 ; Family                ; Cyclone V                             ;
@@ -81,13 +81,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Sep 14 08:34:42 2015
+    Info: Processing started: Mon Sep 14 19:48:14 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab2Problem2 -c Lab2Problem2
 Info (115015): Compilation Report contains advance information. Specifications for device 5CSEMA4U23C6 are subject to change. Contact Altera for information on availability. No programming file will be generated.
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 490 megabytes
-    Info: Processing ended: Mon Sep 14 08:34:44 2015
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Sep 14 19:48:15 2015
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

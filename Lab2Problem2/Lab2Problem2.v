@@ -64,20 +64,20 @@ wire carryAB;
 wire sumABC[3:0];
 wire carryABC;
 wire CarryoutOne;
-fulladder3bits fulladderAB (
-	A,
-	B,
-	0,
-	carryAB,
-	sumAB
-);
-fulladder3bits #100 fulladderABC (
-	sumAB,
-	C,
-	carryAB,
-	CarryoutOne,
-	RegOutOne
-);
+//fulladder3bits fulladderAB (
+//	.inA(A),
+//	.inB(B),
+//	.cin(0),
+//	.cout(carryAB),
+//	.sum(sumAB)
+//);
+//fulladder3bits #100 fulladderABC (
+//	.inA(sumABin),
+//	.inB(C),
+//	.cin(carryAB),
+//	.cout(CarryoutOne),
+//	.sum(RegOutOne)
+//);
 and #200 (RegOutOne[0], sumABC[0], one);
 and #200 (RegOutOne[1], sumABC[1], one);
 and #200 (RegOutOne[2], sumABC[2], one);
