@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for Lab2Problem2
-Mon Sep 14 19:48:23 2015
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Tue Sep 15 13:43:14 2015
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -19,7 +19,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  11. Slow 1100mV 85C Model Minimum Pulse Width Summary
  12. Propagation Delay
  13. Minimum Propagation Delay
- 14. Slow 1100mV 85C Model Metastability Report
+ 14. Slow 1100mV 85C Model Metastability Summary
  15. Slow 1100mV 0C Model Fmax Summary
  16. Slow 1100mV 0C Model Setup Summary
  17. Slow 1100mV 0C Model Hold Summary
@@ -28,7 +28,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  20. Slow 1100mV 0C Model Minimum Pulse Width Summary
  21. Propagation Delay
  22. Minimum Propagation Delay
- 23. Slow 1100mV 0C Model Metastability Report
+ 23. Slow 1100mV 0C Model Metastability Summary
  24. Fast 1100mV 85C Model Setup Summary
  25. Fast 1100mV 85C Model Hold Summary
  26. Fast 1100mV 85C Model Recovery Summary
@@ -36,7 +36,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  28. Fast 1100mV 85C Model Minimum Pulse Width Summary
  29. Propagation Delay
  30. Minimum Propagation Delay
- 31. Fast 1100mV 85C Model Metastability Report
+ 31. Fast 1100mV 85C Model Metastability Summary
  32. Fast 1100mV 0C Model Setup Summary
  33. Fast 1100mV 0C Model Hold Summary
  34. Fast 1100mV 0C Model Recovery Summary
@@ -44,7 +44,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  36. Fast 1100mV 0C Model Minimum Pulse Width Summary
  37. Propagation Delay
  38. Minimum Propagation Delay
- 39. Fast 1100mV 0C Model Metastability Report
+ 39. Fast 1100mV 0C Model Metastability Summary
  40. Multicorner Timing Analysis Summary
  41. Propagation Delay
  42. Minimum Propagation Delay
@@ -65,44 +65,52 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-------------------------------------------------------------------------+
 ; TimeQuest Timing Analyzer Summary                                       ;
 +--------------------+----------------------------------------------------+
-; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name      ; Lab2Problem2                                       ;
 ; Device Family      ; Cyclone V                                          ;
 ; Device Name        ; 5CSEMA4U23C6                                       ;
-; Timing Models      ; Preliminary                                        ;
+; Timing Models      ; Final                                              ;
 ; Delay Model        ; Combined                                           ;
 ; Rise/Fall Delays   ; Enabled                                            ;
 +--------------------+----------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
 
 
 ----------
@@ -158,34 +166,54 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 5.388 ; 5.545 ; 5.600 ; 5.743 ;
-; A[0]       ; RegOut[1]   ; 5.591 ;       ;       ; 6.046 ;
-; A[1]       ; RegOut[1]   ; 6.171 ; 6.477 ; 6.459 ; 6.800 ;
-; A[1]       ; RegOut[2]   ; 6.249 ;       ;       ; 6.756 ;
-; A[2]       ; RegOut[2]   ; 6.059 ; 6.180 ; 6.244 ; 6.371 ;
-; A[2]       ; RegOut[3]   ; 5.131 ;       ;       ; 5.377 ;
-; A[3]       ; Carryout    ; 5.241 ;       ;       ; 5.690 ;
-; A[3]       ; RegOut[3]   ; 4.906 ; 4.968 ; 5.061 ; 5.129 ;
-; B[0]       ; RegOut[0]   ; 4.946 ; 5.138 ; 5.058 ; 5.200 ;
-; B[1]       ; RegOut[1]   ; 5.541 ; 5.848 ; 5.739 ; 6.079 ;
-; B[2]       ; RegOut[2]   ; 5.966 ; 6.151 ; 6.166 ; 6.384 ;
-; B[3]       ; RegOut[3]   ; 4.915 ; 5.040 ; 5.127 ; 5.287 ;
-; C[0]       ; RegOut[0]   ; 5.398 ;       ;       ; 5.812 ;
-; Select[0]  ; Carryout    ;       ; 5.881 ; 6.002 ;       ;
-; Select[0]  ; RegOut[0]   ; 5.621 ; 5.770 ; 5.941 ; 6.082 ;
-; Select[0]  ; RegOut[1]   ; 5.831 ; 6.081 ; 6.148 ; 6.390 ;
-; Select[0]  ; RegOut[2]   ; 5.908 ; 6.036 ; 6.227 ; 6.347 ;
-; Select[0]  ; RegOut[3]   ; 5.250 ; 5.319 ; 5.569 ; 5.630 ;
-; Select[1]  ; Carryout    ;       ; 5.985 ; 6.070 ;       ;
-; Select[1]  ; RegOut[0]   ; 6.096 ; 6.238 ; 6.353 ; 6.501 ;
-; Select[1]  ; RegOut[1]   ; 6.340 ; 6.583 ; 6.602 ; 6.851 ;
-; Select[1]  ; RegOut[2]   ; 6.003 ; 6.139 ; 6.295 ; 6.417 ;
-; Select[1]  ; RegOut[3]   ; 5.321 ; 5.398 ; 5.610 ; 5.673 ;
-; Select[2]  ; Carryout    ; 6.229 ;       ;       ; 6.716 ;
-; Select[2]  ; RegOut[0]   ; 6.319 ; 6.525 ; 6.621 ; 6.860 ;
-; Select[2]  ; RegOut[1]   ; 6.372 ; 6.665 ; 6.667 ; 6.910 ;
-; Select[2]  ; RegOut[2]   ; 6.450 ; 6.621 ; 6.745 ; 6.866 ;
-; Select[2]  ; RegOut[3]   ; 5.947 ; 6.073 ; 6.250 ; 6.409 ;
+; A[0]       ; Carryout    ; 5.354 ;       ;       ; 5.577 ;
+; A[0]       ; RegOut[0]   ; 5.767 ; 6.217 ; 5.846 ; 6.302 ;
+; A[0]       ; RegOut[1]   ; 4.350 ;       ;       ; 4.566 ;
+; A[0]       ; RegOut[2]   ; 5.566 ;       ;       ; 5.720 ;
+; A[0]       ; RegOut[3]   ; 6.449 ;       ;       ; 6.879 ;
+; A[1]       ; Carryout    ; 4.963 ;       ;       ; 5.237 ;
+; A[1]       ; RegOut[1]   ; 5.443 ; 5.526 ; 5.588 ; 5.637 ;
+; A[1]       ; RegOut[2]   ; 5.175 ;       ;       ; 5.380 ;
+; A[1]       ; RegOut[3]   ; 6.058 ;       ;       ; 6.539 ;
+; A[2]       ; Carryout    ; 4.809 ;       ;       ; 5.129 ;
+; A[2]       ; RegOut[2]   ; 5.470 ; 5.493 ; 5.637 ; 5.626 ;
+; A[2]       ; RegOut[3]   ; 5.666 ;       ;       ; 6.181 ;
+; A[3]       ; Carryout    ; 4.567 ;       ;       ; 4.866 ;
+; A[3]       ; RegOut[3]   ; 6.638 ; 7.069 ; 6.826 ; 7.250 ;
+; B[0]       ; Carryout    ; 5.496 ;       ;       ; 5.887 ;
+; B[0]       ; RegOut[0]   ; 6.028 ; 6.485 ; 6.196 ; 6.645 ;
+; B[0]       ; RegOut[1]   ; 4.775 ;       ;       ; 5.033 ;
+; B[0]       ; RegOut[2]   ; 5.708 ;       ;       ; 6.030 ;
+; B[0]       ; RegOut[3]   ; 6.591 ;       ;       ; 7.189 ;
+; B[1]       ; Carryout    ; 5.564 ;       ;       ; 5.955 ;
+; B[1]       ; RegOut[1]   ; 5.493 ; 5.589 ; 5.676 ; 5.822 ;
+; B[1]       ; RegOut[2]   ; 5.776 ;       ;       ; 6.098 ;
+; B[1]       ; RegOut[3]   ; 6.659 ;       ;       ; 7.257 ;
+; B[2]       ; Carryout    ; 4.683 ;       ;       ; 4.946 ;
+; B[2]       ; RegOut[2]   ; 5.535 ; 5.621 ; 5.717 ; 5.796 ;
+; B[2]       ; RegOut[3]   ; 5.828 ;       ;       ; 6.496 ;
+; B[3]       ; Carryout    ; 5.082 ;       ;       ; 5.398 ;
+; B[3]       ; RegOut[3]   ; 6.349 ; 6.763 ; 6.583 ; 7.015 ;
+; C          ; Carryout    ; 5.141 ;       ;       ; 5.568 ;
+; C          ; RegOut[0]   ; 5.625 ;       ;       ; 6.244 ;
+; C          ; RegOut[1]   ; 4.776 ;       ;       ; 5.157 ;
+; C          ; RegOut[2]   ; 5.353 ;       ;       ; 5.711 ;
+; C          ; RegOut[3]   ; 6.236 ;       ;       ; 6.870 ;
+; Select[0]  ; Carryout    ;       ; 5.441 ; 5.436 ;       ;
+; Select[0]  ; RegOut[0]   ; 5.623 ; 6.136 ; 5.735 ; 6.283 ;
+; Select[0]  ; RegOut[1]   ; 5.432 ; 5.570 ; 5.549 ; 5.695 ;
+; Select[0]  ; RegOut[2]   ; 5.267 ; 5.577 ; 5.461 ; 5.469 ;
+; Select[0]  ; RegOut[3]   ; 6.284 ; 6.736 ; 6.430 ; 6.763 ;
+; Select[1]  ; Carryout    ;       ; 5.421 ; 5.470 ;       ;
+; Select[1]  ; RegOut[0]   ; 5.555 ; 6.069 ; 5.667 ; 6.214 ;
+; Select[1]  ; RegOut[1]   ; 5.367 ; 5.513 ; 5.477 ; 5.616 ;
+; Select[1]  ; RegOut[2]   ; 5.103 ; 5.557 ; 5.495 ; 5.232 ;
+; Select[1]  ; RegOut[3]   ; 6.180 ; 6.716 ; 6.377 ; 6.657 ;
+; Select[2]  ; Carryout    ; 6.232 ;       ;       ; 6.693 ;
+; Select[2]  ; RegOut[0]   ; 6.521 ; 6.986 ; 6.921 ; 7.372 ;
+; Select[2]  ; RegOut[1]   ; 6.236 ; 6.367 ; 6.623 ; 6.768 ;
+; Select[2]  ; RegOut[2]   ; 6.257 ; 6.109 ; 6.426 ; 6.829 ;
+; Select[2]  ; RegOut[3]   ; 7.491 ; 7.914 ; 7.873 ; 8.304 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -194,40 +222,60 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 5.068 ; 5.186 ; 5.247 ; 5.355 ;
-; A[0]       ; RegOut[1]   ; 5.236 ;       ;       ; 5.592 ;
-; A[1]       ; RegOut[1]   ; 5.633 ; 5.885 ; 5.926 ; 6.098 ;
-; A[1]       ; RegOut[2]   ; 5.722 ;       ;       ; 6.099 ;
-; A[2]       ; RegOut[2]   ; 5.625 ; 5.738 ; 5.795 ; 5.898 ;
-; A[2]       ; RegOut[3]   ; 4.809 ;       ;       ; 5.074 ;
-; A[3]       ; Carryout    ; 4.812 ;       ;       ; 5.159 ;
-; A[3]       ; RegOut[3]   ; 4.570 ; 4.657 ; 4.715 ; 4.792 ;
-; B[0]       ; RegOut[0]   ; 4.641 ; 4.831 ; 4.766 ; 4.904 ;
-; B[1]       ; RegOut[1]   ; 5.080 ; 5.336 ; 5.313 ; 5.490 ;
-; B[2]       ; RegOut[2]   ; 5.483 ; 5.651 ; 5.715 ; 5.804 ;
-; B[3]       ; RegOut[3]   ; 4.524 ; 4.662 ; 4.777 ; 4.835 ;
-; C[0]       ; RegOut[0]   ; 4.990 ;       ;       ; 5.322 ;
-; Select[0]  ; Carryout    ;       ; 5.403 ; 5.487 ;       ;
-; Select[0]  ; RegOut[0]   ; 5.205 ; 5.336 ; 5.450 ; 5.576 ;
-; Select[0]  ; RegOut[1]   ; 5.378 ; 5.578 ; 5.622 ; 5.817 ;
-; Select[0]  ; RegOut[2]   ; 5.467 ; 5.579 ; 5.711 ; 5.818 ;
-; Select[0]  ; RegOut[3]   ; 4.871 ; 4.957 ; 5.116 ; 5.197 ;
-; Select[1]  ; Carryout    ;       ; 5.537 ; 5.613 ;       ;
-; Select[1]  ; RegOut[0]   ; 5.640 ; 5.772 ; 5.846 ; 5.968 ;
-; Select[1]  ; RegOut[1]   ; 5.844 ; 6.045 ; 6.054 ; 6.245 ;
-; Select[1]  ; RegOut[2]   ; 5.613 ; 5.712 ; 5.837 ; 5.926 ;
-; Select[1]  ; RegOut[3]   ; 4.996 ; 5.069 ; 5.217 ; 5.280 ;
-; Select[2]  ; Carryout    ; 5.750 ;       ;       ; 6.149 ;
-; Select[2]  ; RegOut[0]   ; 5.785 ; 5.972 ; 6.077 ; 6.185 ;
-; Select[2]  ; RegOut[1]   ; 5.881 ; 6.140 ; 6.112 ; 6.319 ;
-; Select[2]  ; RegOut[2]   ; 5.970 ; 6.141 ; 6.201 ; 6.320 ;
-; Select[2]  ; RegOut[3]   ; 5.450 ; 5.592 ; 5.743 ; 5.806 ;
+; A[0]       ; Carryout    ; 4.881 ;       ;       ; 5.102 ;
+; A[0]       ; RegOut[0]   ; 5.335 ; 5.746 ; 5.427 ; 5.828 ;
+; A[0]       ; RegOut[1]   ; 4.156 ;       ;       ; 4.365 ;
+; A[0]       ; RegOut[2]   ; 5.122 ;       ;       ; 5.316 ;
+; A[0]       ; RegOut[3]   ; 5.902 ;       ;       ; 6.332 ;
+; A[1]       ; Carryout    ; 4.564 ;       ;       ; 4.802 ;
+; A[1]       ; RegOut[1]   ; 4.983 ; 5.061 ; 5.083 ; 5.240 ;
+; A[1]       ; RegOut[2]   ; 4.215 ;       ;       ; 4.447 ;
+; A[1]       ; RegOut[3]   ; 5.585 ;       ;       ; 6.032 ;
+; A[2]       ; Carryout    ; 4.442 ;       ;       ; 4.718 ;
+; A[2]       ; RegOut[2]   ; 5.015 ; 5.045 ; 5.127 ; 5.236 ;
+; A[2]       ; RegOut[3]   ; 5.271 ;       ;       ; 5.768 ;
+; A[3]       ; Carryout    ; 4.318 ;       ;       ; 4.576 ;
+; A[3]       ; RegOut[3]   ; 6.085 ; 6.456 ; 6.233 ; 6.614 ;
+; B[0]       ; Carryout    ; 4.962 ;       ;       ; 5.290 ;
+; B[0]       ; RegOut[0]   ; 5.579 ; 5.989 ; 5.727 ; 6.132 ;
+; B[0]       ; RegOut[1]   ; 4.504 ;       ;       ; 4.784 ;
+; B[0]       ; RegOut[2]   ; 5.203 ;       ;       ; 5.504 ;
+; B[0]       ; RegOut[3]   ; 5.983 ;       ;       ; 6.520 ;
+; B[1]       ; Carryout    ; 5.059 ;       ;       ; 5.411 ;
+; B[1]       ; RegOut[1]   ; 5.107 ; 5.177 ; 5.268 ; 5.390 ;
+; B[1]       ; RegOut[2]   ; 5.300 ;       ;       ; 5.625 ;
+; B[1]       ; RegOut[3]   ; 6.080 ;       ;       ; 6.641 ;
+; B[2]       ; Carryout    ; 4.394 ;       ;       ; 4.668 ;
+; B[2]       ; RegOut[2]   ; 5.120 ; 5.200 ; 5.266 ; 5.356 ;
+; B[2]       ; RegOut[3]   ; 5.353 ;       ;       ; 5.919 ;
+; B[3]       ; Carryout    ; 4.756 ;       ;       ; 5.056 ;
+; B[3]       ; RegOut[3]   ; 5.878 ; 6.261 ; 6.079 ; 6.474 ;
+; C          ; Carryout    ; 4.706 ;       ;       ; 5.135 ;
+; C          ; RegOut[0]   ; 5.220 ;       ;       ; 5.813 ;
+; C          ; RegOut[1]   ; 4.434 ;       ;       ; 4.777 ;
+; C          ; RegOut[2]   ; 4.947 ;       ;       ; 5.349 ;
+; C          ; RegOut[3]   ; 5.727 ;       ;       ; 6.365 ;
+; Select[0]  ; Carryout    ;       ; 4.998 ; 5.022 ;       ;
+; Select[0]  ; RegOut[0]   ; 5.142 ; 5.603 ; 5.322 ; 5.704 ;
+; Select[0]  ; RegOut[1]   ; 5.020 ; 4.967 ; 4.932 ; 5.263 ;
+; Select[0]  ; RegOut[2]   ; 4.886 ; 4.967 ; 4.994 ; 5.080 ;
+; Select[0]  ; RegOut[3]   ; 5.725 ; 6.042 ; 5.778 ; 6.222 ;
+; Select[1]  ; Carryout    ;       ; 5.044 ; 5.056 ;       ;
+; Select[1]  ; RegOut[0]   ; 5.101 ; 5.567 ; 5.282 ; 5.669 ;
+; Select[1]  ; RegOut[1]   ; 4.976 ; 5.013 ; 4.966 ; 5.218 ;
+; Select[1]  ; RegOut[2]   ; 4.708 ; 4.733 ; 4.808 ; 4.911 ;
+; Select[1]  ; RegOut[3]   ; 5.651 ; 5.967 ; 5.754 ; 6.147 ;
+; Select[2]  ; Carryout    ; 5.777 ;       ;       ; 6.200 ;
+; Select[2]  ; RegOut[0]   ; 6.068 ; 6.465 ; 6.406 ; 6.793 ;
+; Select[2]  ; RegOut[1]   ; 5.687 ; 5.931 ; 6.118 ; 6.169 ;
+; Select[2]  ; RegOut[2]   ; 5.626 ; 5.720 ; 5.955 ; 6.058 ;
+; Select[2]  ; RegOut[3]   ; 6.533 ; 7.257 ; 7.212 ; 7.257 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
-----------------------------------------------
-; Slow 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -272,34 +320,54 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 5.116 ; 5.330 ; 5.339 ; 5.535 ;
-; A[0]       ; RegOut[1]   ; 5.327 ;       ;       ; 5.845 ;
-; A[1]       ; RegOut[1]   ; 5.945 ; 6.311 ; 6.242 ; 6.655 ;
-; A[1]       ; RegOut[2]   ; 6.039 ;       ;       ; 6.596 ;
-; A[2]       ; RegOut[2]   ; 5.856 ; 5.995 ; 6.047 ; 6.194 ;
-; A[2]       ; RegOut[3]   ; 4.914 ;       ;       ; 5.184 ;
-; A[3]       ; Carryout    ; 5.021 ;       ;       ; 5.527 ;
-; A[3]       ; RegOut[3]   ; 4.733 ; 4.801 ; 4.898 ; 4.974 ;
-; B[0]       ; RegOut[0]   ; 4.687 ; 4.942 ; 4.801 ; 5.004 ;
-; B[1]       ; RegOut[1]   ; 5.310 ; 5.678 ; 5.505 ; 5.926 ;
-; B[2]       ; RegOut[2]   ; 5.744 ; 5.958 ; 5.942 ; 6.209 ;
-; B[3]       ; RegOut[3]   ; 4.741 ; 4.882 ; 4.959 ; 5.147 ;
-; C[0]       ; RegOut[0]   ; 5.185 ;       ;       ; 5.669 ;
-; Select[0]  ; Carryout    ;       ; 5.727 ; 5.832 ;       ;
-; Select[0]  ; RegOut[0]   ; 5.414 ; 5.617 ; 5.743 ; 5.936 ;
-; Select[0]  ; RegOut[1]   ; 5.628 ; 5.931 ; 5.957 ; 6.250 ;
-; Select[0]  ; RegOut[2]   ; 5.722 ; 5.871 ; 6.052 ; 6.191 ;
-; Select[0]  ; RegOut[3]   ; 5.094 ; 5.172 ; 5.423 ; 5.491 ;
-; Select[1]  ; Carryout    ;       ; 5.802 ; 5.871 ;       ;
-; Select[1]  ; RegOut[0]   ; 5.899 ; 6.092 ; 6.163 ; 6.364 ;
-; Select[1]  ; RegOut[1]   ; 6.153 ; 6.446 ; 6.417 ; 6.718 ;
-; Select[1]  ; RegOut[2]   ; 5.788 ; 5.948 ; 6.091 ; 6.233 ;
-; Select[1]  ; RegOut[3]   ; 5.132 ; 5.221 ; 5.436 ; 5.507 ;
-; Select[2]  ; Carryout    ; 5.991 ;       ;       ; 6.530 ;
-; Select[2]  ; RegOut[0]   ; 6.074 ; 6.342 ; 6.388 ; 6.709 ;
-; Select[2]  ; RegOut[1]   ; 6.112 ; 6.467 ; 6.428 ; 6.731 ;
-; Select[2]  ; RegOut[2]   ; 6.207 ; 6.408 ; 6.523 ; 6.672 ;
-; Select[2]  ; RegOut[3]   ; 5.755 ; 5.898 ; 6.070 ; 6.266 ;
+; A[0]       ; Carryout    ; 5.221 ;       ;       ; 5.425 ;
+; A[0]       ; RegOut[0]   ; 5.540 ; 6.015 ; 5.609 ; 6.092 ;
+; A[0]       ; RegOut[1]   ; 4.133 ;       ;       ; 4.381 ;
+; A[0]       ; RegOut[2]   ; 5.437 ;       ;       ; 5.573 ;
+; A[0]       ; RegOut[3]   ; 6.269 ;       ;       ; 6.674 ;
+; A[1]       ; Carryout    ; 4.756 ;       ;       ; 5.034 ;
+; A[1]       ; RegOut[1]   ; 5.243 ; 5.390 ; 5.403 ; 5.502 ;
+; A[1]       ; RegOut[2]   ; 4.972 ;       ;       ; 5.182 ;
+; A[1]       ; RegOut[3]   ; 5.804 ;       ;       ; 6.283 ;
+; A[2]       ; Carryout    ; 4.578 ;       ;       ; 4.945 ;
+; A[2]       ; RegOut[2]   ; 5.204 ; 5.281 ; 5.402 ; 5.431 ;
+; A[2]       ; RegOut[3]   ; 5.335 ;       ;       ; 5.904 ;
+; A[3]       ; Carryout    ; 4.308 ;       ;       ; 4.632 ;
+; A[3]       ; RegOut[3]   ; 6.366 ; 6.848 ; 6.563 ; 7.038 ;
+; B[0]       ; Carryout    ; 5.320 ;       ;       ; 5.720 ;
+; B[0]       ; RegOut[0]   ; 5.769 ; 6.255 ; 5.941 ; 6.416 ;
+; B[0]       ; RegOut[1]   ; 4.532 ;       ;       ; 4.831 ;
+; B[0]       ; RegOut[2]   ; 5.536 ;       ;       ; 5.868 ;
+; B[0]       ; RegOut[3]   ; 6.368 ;       ;       ; 6.969 ;
+; B[1]       ; Carryout    ; 5.396 ;       ;       ; 5.777 ;
+; B[1]       ; RegOut[1]   ; 5.262 ; 5.420 ; 5.443 ; 5.653 ;
+; B[1]       ; RegOut[2]   ; 5.612 ;       ;       ; 5.925 ;
+; B[1]       ; RegOut[3]   ; 6.444 ;       ;       ; 7.026 ;
+; B[2]       ; Carryout    ; 4.427 ;       ;       ; 4.717 ;
+; B[2]       ; RegOut[2]   ; 5.281 ; 5.430 ; 5.471 ; 5.613 ;
+; B[2]       ; RegOut[3]   ; 5.521 ;       ;       ; 6.243 ;
+; B[3]       ; Carryout    ; 4.920 ;       ;       ; 5.239 ;
+; B[3]       ; RegOut[3]   ; 6.085 ; 6.545 ; 6.319 ; 6.802 ;
+; C          ; Carryout    ; 4.933 ;       ;       ; 5.356 ;
+; C          ; RegOut[0]   ; 5.322 ;       ;       ; 5.969 ;
+; C          ; RegOut[1]   ; 4.550 ;       ;       ; 4.977 ;
+; C          ; RegOut[2]   ; 5.149 ;       ;       ; 5.504 ;
+; C          ; RegOut[3]   ; 5.981 ;       ;       ; 6.605 ;
+; Select[0]  ; Carryout    ;       ; 5.267 ; 5.282 ;       ;
+; Select[0]  ; RegOut[0]   ; 5.351 ; 5.899 ; 5.462 ; 6.057 ;
+; Select[0]  ; RegOut[1]   ; 5.245 ; 5.454 ; 5.361 ; 5.581 ;
+; Select[0]  ; RegOut[2]   ; 5.044 ; 5.402 ; 5.272 ; 5.310 ;
+; Select[0]  ; RegOut[3]   ; 6.035 ; 6.502 ; 6.192 ; 6.555 ;
+; Select[1]  ; Carryout    ;       ; 5.269 ; 5.339 ;       ;
+; Select[1]  ; RegOut[0]   ; 5.291 ; 5.841 ; 5.387 ; 5.990 ;
+; Select[1]  ; RegOut[1]   ; 5.193 ; 5.412 ; 5.292 ; 5.504 ;
+; Select[1]  ; RegOut[2]   ; 4.886 ; 5.404 ; 5.329 ; 5.051 ;
+; Select[1]  ; RegOut[3]   ; 5.946 ; 6.504 ; 6.159 ; 6.447 ;
+; Select[2]  ; Carryout    ; 6.006 ;       ;       ; 6.426 ;
+; Select[2]  ; RegOut[0]   ; 6.178 ; 6.674 ; 6.566 ; 7.044 ;
+; Select[2]  ; RegOut[1]   ; 5.965 ; 6.164 ; 6.333 ; 6.550 ;
+; Select[2]  ; RegOut[2]   ; 5.996 ; 5.866 ; 6.105 ; 6.561 ;
+; Select[2]  ; RegOut[3]   ; 7.213 ; 7.686 ; 7.573 ; 8.056 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -308,40 +376,60 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 4.807 ; 4.993 ; 5.000 ; 5.174 ;
-; A[0]       ; RegOut[1]   ; 4.982 ;       ;       ; 5.425 ;
-; A[1]       ; RegOut[1]   ; 5.396 ; 5.736 ; 5.699 ; 5.940 ;
-; A[1]       ; RegOut[2]   ; 5.502 ;       ;       ; 5.918 ;
-; A[2]       ; RegOut[2]   ; 5.421 ; 5.567 ; 5.600 ; 5.737 ;
-; A[2]       ; RegOut[3]   ; 4.600 ;       ;       ; 4.891 ;
-; A[3]       ; Carryout    ; 4.587 ;       ;       ; 4.986 ;
-; A[3]       ; RegOut[3]   ; 4.397 ; 4.493 ; 4.554 ; 4.641 ;
-; B[0]       ; RegOut[0]   ; 4.390 ; 4.654 ; 4.516 ; 4.725 ;
-; B[1]       ; RegOut[1]   ; 4.841 ; 5.191 ; 5.093 ; 5.323 ;
-; B[2]       ; RegOut[2]   ; 5.252 ; 5.474 ; 5.505 ; 5.607 ;
-; B[3]       ; RegOut[3]   ; 4.339 ; 4.501 ; 4.597 ; 4.660 ;
-; C[0]       ; RegOut[0]   ; 4.768 ;       ;       ; 5.165 ;
-; Select[0]  ; Carryout    ;       ; 5.270 ; 5.326 ;       ;
-; Select[0]  ; RegOut[0]   ; 4.998 ; 5.196 ; 5.258 ; 5.450 ;
-; Select[0]  ; RegOut[1]   ; 5.176 ; 5.450 ; 5.436 ; 5.704 ;
-; Select[0]  ; RegOut[2]   ; 5.281 ; 5.427 ; 5.542 ; 5.682 ;
-; Select[0]  ; RegOut[3]   ; 4.714 ; 4.810 ; 4.975 ; 5.065 ;
-; Select[1]  ; Carryout    ;       ; 5.383 ; 5.423 ;       ;
-; Select[1]  ; RegOut[0]   ; 5.444 ; 5.642 ; 5.655 ; 5.844 ;
-; Select[1]  ; RegOut[1]   ; 5.657 ; 5.931 ; 5.868 ; 6.133 ;
-; Select[1]  ; RegOut[2]   ; 5.408 ; 5.542 ; 5.640 ; 5.762 ;
-; Select[1]  ; RegOut[3]   ; 4.817 ; 4.901 ; 5.049 ; 5.121 ;
-; Select[2]  ; Carryout    ; 5.521 ;       ;       ; 5.990 ;
-; Select[2]  ; RegOut[0]   ; 5.530 ; 5.804 ; 5.858 ; 6.012 ;
-; Select[2]  ; RegOut[1]   ; 5.628 ; 5.968 ; 5.882 ; 6.167 ;
-; Select[2]  ; RegOut[2]   ; 5.734 ; 5.946 ; 5.988 ; 6.145 ;
-; Select[2]  ; RegOut[3]   ; 5.247 ; 5.419 ; 5.576 ; 5.628 ;
+; A[0]       ; Carryout    ; 4.729 ;       ;       ; 4.913 ;
+; A[0]       ; RegOut[0]   ; 5.121 ; 5.564 ; 5.201 ; 5.634 ;
+; A[0]       ; RegOut[1]   ; 3.950 ;       ;       ; 4.188 ;
+; A[0]       ; RegOut[2]   ; 4.979 ;       ;       ; 5.169 ;
+; A[0]       ; RegOut[3]   ; 5.713 ;       ;       ; 6.128 ;
+; A[1]       ; Carryout    ; 4.350 ;       ;       ; 4.568 ;
+; A[1]       ; RegOut[1]   ; 4.776 ; 4.908 ; 4.858 ; 5.089 ;
+; A[1]       ; RegOut[2]   ; 3.979 ;       ;       ; 4.254 ;
+; A[1]       ; RegOut[3]   ; 5.334 ;       ;       ; 5.783 ;
+; A[2]       ; Carryout    ; 4.209 ;       ;       ; 4.506 ;
+; A[2]       ; RegOut[2]   ; 4.754 ; 4.823 ; 4.863 ; 5.031 ;
+; A[2]       ; RegOut[3]   ; 4.960 ;       ;       ; 5.505 ;
+; A[3]       ; Carryout    ; 4.077 ;       ;       ; 4.360 ;
+; A[3]       ; RegOut[3]   ; 5.820 ; 6.236 ; 5.978 ; 6.404 ;
+; B[0]       ; Carryout    ; 4.762 ;       ;       ; 5.058 ;
+; B[0]       ; RegOut[0]   ; 5.338 ; 5.780 ; 5.490 ; 5.927 ;
+; B[0]       ; RegOut[1]   ; 4.273 ;       ;       ; 4.597 ;
+; B[0]       ; RegOut[2]   ; 5.012 ;       ;       ; 5.314 ;
+; B[0]       ; RegOut[3]   ; 5.746 ;       ;       ; 6.273 ;
+; B[1]       ; Carryout    ; 4.877 ;       ;       ; 5.201 ;
+; B[1]       ; RegOut[1]   ; 4.879 ; 5.011 ; 5.037 ; 5.224 ;
+; B[1]       ; RegOut[2]   ; 5.127 ;       ;       ; 5.457 ;
+; B[1]       ; RegOut[3]   ; 5.861 ;       ;       ; 6.416 ;
+; B[2]       ; Carryout    ; 4.153 ;       ;       ; 4.461 ;
+; B[2]       ; RegOut[2]   ; 4.877 ; 5.011 ; 5.036 ; 5.180 ;
+; B[2]       ; RegOut[3]   ; 5.049 ;       ;       ; 5.648 ;
+; B[3]       ; Carryout    ; 4.594 ;       ;       ; 4.905 ;
+; B[3]       ; RegOut[3]   ; 5.620 ; 6.047 ; 5.825 ; 6.268 ;
+; C          ; Carryout    ; 4.493 ;       ;       ; 4.892 ;
+; C          ; RegOut[0]   ; 4.940 ;       ;       ; 5.562 ;
+; C          ; RegOut[1]   ; 4.202 ;       ;       ; 4.565 ;
+; C          ; RegOut[2]   ; 4.743 ;       ;       ; 5.148 ;
+; C          ; RegOut[3]   ; 5.477 ;       ;       ; 6.107 ;
+; Select[0]  ; Carryout    ;       ; 4.818 ; 4.851 ;       ;
+; Select[0]  ; RegOut[0]   ; 4.873 ; 5.381 ; 5.053 ; 5.462 ;
+; Select[0]  ; RegOut[1]   ; 4.829 ; 4.761 ; 4.722 ; 5.140 ;
+; Select[0]  ; RegOut[2]   ; 4.668 ; 4.803 ; 4.776 ; 4.916 ;
+; Select[0]  ; RegOut[3]   ; 5.471 ; 5.785 ; 5.512 ; 6.002 ;
+; Select[1]  ; Carryout    ;       ; 4.890 ; 4.913 ;       ;
+; Select[1]  ; RegOut[0]   ; 4.840 ; 5.358 ; 5.028 ; 5.425 ;
+; Select[1]  ; RegOut[1]   ; 4.796 ; 4.833 ; 4.784 ; 5.096 ;
+; Select[1]  ; RegOut[2]   ; 4.497 ; 4.556 ; 4.560 ; 4.738 ;
+; Select[1]  ; RegOut[3]   ; 5.414 ; 5.760 ; 5.485 ; 5.946 ;
+; Select[2]  ; Carryout    ; 5.552 ;       ;       ; 5.943 ;
+; Select[2]  ; RegOut[0]   ; 5.749 ; 6.179 ; 6.076 ; 6.494 ;
+; Select[2]  ; RegOut[1]   ; 5.423 ; 5.730 ; 5.833 ; 5.886 ;
+; Select[2]  ; RegOut[2]   ; 5.335 ; 5.482 ; 5.649 ; 5.809 ;
+; Select[2]  ; RegOut[3]   ; 6.213 ; 7.025 ; 6.918 ; 6.910 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
----------------------------------------------
-; Slow 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -380,34 +468,54 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 3.307 ; 3.507 ; 3.791 ; 3.990 ;
-; A[0]       ; RegOut[1]   ; 3.442 ;       ;       ; 4.211 ;
-; A[1]       ; RegOut[1]   ; 3.785 ; 4.115 ; 4.349 ; 4.678 ;
-; A[1]       ; RegOut[2]   ; 3.791 ;       ;       ; 4.593 ;
-; A[2]       ; RegOut[2]   ; 3.597 ; 3.796 ; 4.066 ; 4.267 ;
-; A[2]       ; RegOut[3]   ; 3.125 ;       ;       ; 3.715 ;
-; A[3]       ; Carryout    ; 3.204 ;       ;       ; 3.946 ;
-; A[3]       ; RegOut[3]   ; 2.964 ; 3.100 ; 3.408 ; 3.546 ;
-; B[0]       ; RegOut[0]   ; 3.040 ; 3.256 ; 3.442 ; 3.635 ;
-; B[1]       ; RegOut[1]   ; 3.400 ; 3.724 ; 3.875 ; 4.206 ;
-; B[2]       ; RegOut[2]   ; 3.615 ; 3.848 ; 4.092 ; 4.332 ;
-; B[3]       ; RegOut[3]   ; 3.024 ; 3.200 ; 3.517 ; 3.692 ;
-; C[0]       ; RegOut[0]   ; 3.292 ;       ;       ; 4.004 ;
-; Select[0]  ; Carryout    ;       ; 3.743 ; 4.060 ;       ;
-; Select[0]  ; RegOut[0]   ; 3.439 ; 3.645 ; 4.020 ; 4.223 ;
-; Select[0]  ; RegOut[1]   ; 3.579 ; 3.872 ; 4.160 ; 4.450 ;
-; Select[0]  ; RegOut[2]   ; 3.585 ; 3.787 ; 4.165 ; 4.364 ;
-; Select[0]  ; RegOut[3]   ; 3.216 ; 3.355 ; 3.797 ; 3.933 ;
-; Select[1]  ; Carryout    ;       ; 3.816 ; 4.107 ;       ;
-; Select[1]  ; RegOut[0]   ; 3.660 ; 3.863 ; 4.192 ; 4.397 ;
-; Select[1]  ; RegOut[1]   ; 3.833 ; 4.123 ; 4.371 ; 4.663 ;
-; Select[1]  ; RegOut[2]   ; 3.664 ; 3.860 ; 4.212 ; 4.407 ;
-; Select[1]  ; RegOut[3]   ; 3.271 ; 3.404 ; 3.818 ; 3.950 ;
-; Select[2]  ; Carryout    ; 3.856 ;       ;       ; 4.681 ;
-; Select[2]  ; RegOut[0]   ; 3.877 ; 4.114 ; 4.456 ; 4.700 ;
-; Select[2]  ; RegOut[1]   ; 3.951 ; 4.254 ; 4.527 ; 4.807 ;
-; Select[2]  ; RegOut[2]   ; 3.957 ; 4.169 ; 4.532 ; 4.721 ;
-; Select[2]  ; RegOut[3]   ; 3.654 ; 3.824 ; 4.233 ; 4.410 ;
+; A[0]       ; Carryout    ; 3.203 ;       ;       ; 3.762 ;
+; A[0]       ; RegOut[0]   ; 3.548 ; 4.015 ; 3.926 ; 4.395 ;
+; A[0]       ; RegOut[1]   ; 2.712 ;       ;       ; 3.253 ;
+; A[0]       ; RegOut[2]   ; 3.263 ;       ;       ; 3.815 ;
+; A[0]       ; RegOut[3]   ; 3.886 ;       ;       ; 4.687 ;
+; A[1]       ; Carryout    ; 3.020 ;       ;       ; 3.606 ;
+; A[1]       ; RegOut[1]   ; 3.239 ; 3.349 ; 3.641 ; 3.752 ;
+; A[1]       ; RegOut[2]   ; 3.080 ;       ;       ; 3.659 ;
+; A[1]       ; RegOut[3]   ; 3.703 ;       ;       ; 4.531 ;
+; A[2]       ; Carryout    ; 2.977 ;       ;       ; 3.595 ;
+; A[2]       ; RegOut[2]   ; 3.314 ; 3.410 ; 3.754 ; 3.851 ;
+; A[2]       ; RegOut[3]   ; 3.580 ;       ;       ; 4.423 ;
+; A[3]       ; Carryout    ; 2.853 ;       ;       ; 3.473 ;
+; A[3]       ; RegOut[3]   ; 4.015 ; 4.430 ; 4.492 ; 4.905 ;
+; B[0]       ; Carryout    ; 3.310 ;       ;       ; 3.980 ;
+; B[0]       ; RegOut[0]   ; 3.708 ; 4.177 ; 4.170 ; 4.637 ;
+; B[0]       ; RegOut[1]   ; 2.954 ;       ;       ; 3.550 ;
+; B[0]       ; RegOut[2]   ; 3.370 ;       ;       ; 4.033 ;
+; B[0]       ; RegOut[3]   ; 3.993 ;       ;       ; 4.905 ;
+; B[1]       ; Carryout    ; 3.313 ;       ;       ; 4.006 ;
+; B[1]       ; RegOut[1]   ; 3.286 ; 3.423 ; 3.767 ; 3.927 ;
+; B[1]       ; RegOut[2]   ; 3.373 ;       ;       ; 4.059 ;
+; B[1]       ; RegOut[3]   ; 3.996 ;       ;       ; 4.931 ;
+; B[2]       ; Carryout    ; 2.900 ;       ;       ; 3.492 ;
+; B[2]       ; RegOut[2]   ; 3.287 ; 3.422 ; 3.757 ; 3.890 ;
+; B[2]       ; RegOut[3]   ; 3.611 ;       ;       ; 4.535 ;
+; B[3]       ; Carryout    ; 3.113 ;       ;       ; 3.743 ;
+; B[3]       ; RegOut[3]   ; 3.926 ; 4.345 ; 4.426 ; 4.847 ;
+; C          ; Carryout    ; 3.142 ;       ;       ; 3.815 ;
+; C          ; RegOut[0]   ; 3.524 ;       ;       ; 4.436 ;
+; C          ; RegOut[1]   ; 2.927 ;       ;       ; 3.581 ;
+; C          ; RegOut[2]   ; 3.202 ;       ;       ; 3.868 ;
+; C          ; RegOut[3]   ; 3.825 ;       ;       ; 4.740 ;
+; Select[0]  ; Carryout    ;       ; 3.373 ; 3.585 ;       ;
+; Select[0]  ; RegOut[0]   ; 3.487 ; 3.993 ; 3.888 ; 4.394 ;
+; Select[0]  ; RegOut[1]   ; 3.221 ; 3.385 ; 3.628 ; 3.777 ;
+; Select[0]  ; RegOut[2]   ; 3.153 ; 3.437 ; 3.589 ; 3.695 ;
+; Select[0]  ; RegOut[3]   ; 3.844 ; 4.309 ; 4.247 ; 4.623 ;
+; Select[1]  ; Carryout    ;       ; 3.334 ; 3.571 ;       ;
+; Select[1]  ; RegOut[0]   ; 3.449 ; 3.950 ; 3.837 ; 4.345 ;
+; Select[1]  ; RegOut[1]   ; 3.182 ; 3.346 ; 3.572 ; 3.719 ;
+; Select[1]  ; RegOut[2]   ; 3.065 ; 3.398 ; 3.575 ; 3.544 ;
+; Select[1]  ; RegOut[3]   ; 3.769 ; 4.270 ; 4.198 ; 4.533 ;
+; Select[2]  ; Carryout    ; 3.799 ;       ;       ; 4.594 ;
+; Select[2]  ; RegOut[0]   ; 4.096 ; 4.560 ; 4.742 ; 5.205 ;
+; Select[2]  ; RegOut[1]   ; 3.788 ; 3.942 ; 4.433 ; 4.606 ;
+; Select[2]  ; RegOut[2]   ; 3.803 ; 3.829 ; 4.332 ; 4.658 ;
+; Select[2]  ; RegOut[3]   ; 4.555 ; 4.968 ; 5.194 ; 5.609 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -416,40 +524,60 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 3.153 ; 3.322 ; 3.608 ; 3.776 ;
-; A[0]       ; RegOut[1]   ; 3.265 ;       ;       ; 3.950 ;
-; A[1]       ; RegOut[1]   ; 3.530 ; 3.778 ; 4.052 ; 4.275 ;
-; A[1]       ; RegOut[2]   ; 3.549 ;       ;       ; 4.231 ;
-; A[2]       ; RegOut[2]   ; 3.402 ; 3.581 ; 3.850 ; 4.026 ;
-; A[2]       ; RegOut[3]   ; 2.977 ;       ;       ; 3.562 ;
-; A[3]       ; Carryout    ; 3.017 ;       ;       ; 3.668 ;
-; A[3]       ; RegOut[3]   ; 2.820 ; 2.959 ; 3.246 ; 3.382 ;
-; B[0]       ; RegOut[0]   ; 2.897 ; 3.101 ; 3.300 ; 3.480 ;
-; B[1]       ; RegOut[1]   ; 3.188 ; 3.436 ; 3.653 ; 3.879 ;
-; B[2]       ; RegOut[2]   ; 3.398 ; 3.583 ; 3.863 ; 4.026 ;
-; B[3]       ; RegOut[3]   ; 2.858 ; 3.003 ; 3.339 ; 3.459 ;
-; C[0]       ; RegOut[0]   ; 3.117 ;       ;       ; 3.749 ;
-; Select[0]  ; Carryout    ;       ; 3.491 ; 3.785 ;       ;
-; Select[0]  ; RegOut[0]   ; 3.239 ; 3.420 ; 3.759 ; 3.937 ;
-; Select[0]  ; RegOut[1]   ; 3.356 ; 3.599 ; 3.875 ; 4.115 ;
-; Select[0]  ; RegOut[2]   ; 3.375 ; 3.555 ; 3.894 ; 4.071 ;
-; Select[0]  ; RegOut[3]   ; 3.039 ; 3.179 ; 3.558 ; 3.695 ;
-; Select[1]  ; Carryout    ;       ; 3.575 ; 3.857 ;       ;
-; Select[1]  ; RegOut[0]   ; 3.446 ; 3.626 ; 3.929 ; 4.106 ;
-; Select[1]  ; RegOut[1]   ; 3.593 ; 3.835 ; 4.081 ; 4.320 ;
-; Select[1]  ; RegOut[2]   ; 3.472 ; 3.640 ; 3.966 ; 4.133 ;
-; Select[1]  ; RegOut[3]   ; 3.114 ; 3.242 ; 3.607 ; 3.734 ;
-; Select[2]  ; Carryout    ; 3.607 ;       ;       ; 4.344 ;
-; Select[2]  ; RegOut[0]   ; 3.622 ; 3.808 ; 4.155 ; 4.319 ;
-; Select[2]  ; RegOut[1]   ; 3.693 ; 3.959 ; 4.207 ; 4.449 ;
-; Select[2]  ; RegOut[2]   ; 3.712 ; 3.915 ; 4.226 ; 4.405 ;
-; Select[2]  ; RegOut[3]   ; 3.421 ; 3.566 ; 3.954 ; 4.077 ;
+; A[0]       ; Carryout    ; 3.012 ;       ;       ; 3.540 ;
+; A[0]       ; RegOut[0]   ; 3.338 ; 3.759 ; 3.716 ; 4.135 ;
+; A[0]       ; RegOut[1]   ; 2.625 ;       ;       ; 3.156 ;
+; A[0]       ; RegOut[2]   ; 3.075 ;       ;       ; 3.628 ;
+; A[0]       ; RegOut[3]   ; 3.638 ;       ;       ; 4.408 ;
+; A[1]       ; Carryout    ; 2.853 ;       ;       ; 3.393 ;
+; A[1]       ; RegOut[1]   ; 3.021 ; 3.155 ; 3.410 ; 3.569 ;
+; A[1]       ; RegOut[2]   ; 2.630 ;       ;       ; 3.187 ;
+; A[1]       ; RegOut[3]   ; 3.479 ;       ;       ; 4.261 ;
+; A[2]       ; Carryout    ; 2.826 ;       ;       ; 3.391 ;
+; A[2]       ; RegOut[2]   ; 3.086 ; 3.215 ; 3.506 ; 3.660 ;
+; A[2]       ; RegOut[3]   ; 3.382 ;       ;       ; 4.190 ;
+; A[3]       ; Carryout    ; 2.736 ;       ;       ; 3.318 ;
+; A[3]       ; RegOut[3]   ; 3.753 ; 4.126 ; 4.197 ; 4.573 ;
+; B[0]       ; Carryout    ; 3.098 ;       ;       ; 3.690 ;
+; B[0]       ; RegOut[0]   ; 3.485 ; 3.907 ; 3.928 ; 4.347 ;
+; B[0]       ; RegOut[1]   ; 2.829 ;       ;       ; 3.424 ;
+; B[0]       ; RegOut[2]   ; 3.161 ;       ;       ; 3.778 ;
+; B[0]       ; RegOut[3]   ; 3.724 ;       ;       ; 4.558 ;
+; B[1]       ; Carryout    ; 3.101 ;       ;       ; 3.739 ;
+; B[1]       ; RegOut[1]   ; 3.115 ; 3.231 ; 3.571 ; 3.712 ;
+; B[1]       ; RegOut[2]   ; 3.164 ;       ;       ; 3.827 ;
+; B[1]       ; RegOut[3]   ; 3.727 ;       ;       ; 4.607 ;
+; B[2]       ; Carryout    ; 2.765 ;       ;       ; 3.348 ;
+; B[2]       ; RegOut[2]   ; 3.096 ; 3.231 ; 3.536 ; 3.675 ;
+; B[2]       ; RegOut[3]   ; 3.393 ;       ;       ; 4.224 ;
+; B[3]       ; Carryout    ; 2.972 ;       ;       ; 3.575 ;
+; B[3]       ; RegOut[3]   ; 3.701 ; 4.085 ; 4.173 ; 4.559 ;
+; C          ; Carryout    ; 2.954 ;       ;       ; 3.604 ;
+; C          ; RegOut[0]   ; 3.314 ;       ;       ; 4.186 ;
+; C          ; RegOut[1]   ; 2.784 ;       ;       ; 3.396 ;
+; C          ; RegOut[2]   ; 3.017 ;       ;       ; 3.692 ;
+; C          ; RegOut[3]   ; 3.580 ;       ;       ; 4.472 ;
+; Select[0]  ; Carryout    ;       ; 3.151 ; 3.401 ;       ;
+; Select[0]  ; RegOut[0]   ; 3.262 ; 3.689 ; 3.676 ; 4.078 ;
+; Select[0]  ; RegOut[1]   ; 3.044 ; 3.125 ; 3.359 ; 3.581 ;
+; Select[0]  ; RegOut[2]   ; 2.981 ; 3.116 ; 3.377 ; 3.514 ;
+; Select[0]  ; RegOut[3]   ; 3.564 ; 3.931 ; 3.953 ; 4.346 ;
+; Select[1]  ; Carryout    ;       ; 3.163 ; 3.392 ;       ;
+; Select[1]  ; RegOut[0]   ; 3.237 ; 3.664 ; 3.643 ; 4.048 ;
+; Select[1]  ; RegOut[1]   ; 3.016 ; 3.137 ; 3.350 ; 3.543 ;
+; Select[1]  ; RegOut[2]   ; 2.874 ; 3.004 ; 3.249 ; 3.401 ;
+; Select[1]  ; RegOut[3]   ; 3.508 ; 3.876 ; 3.889 ; 4.278 ;
+; Select[2]  ; Carryout    ; 3.586 ;       ;       ; 4.331 ;
+; Select[2]  ; RegOut[0]   ; 3.856 ; 4.266 ; 4.452 ; 4.861 ;
+; Select[2]  ; RegOut[1]   ; 3.544 ; 3.731 ; 4.175 ; 4.305 ;
+; Select[2]  ; RegOut[2]   ; 3.490 ; 3.637 ; 4.083 ; 4.231 ;
+; Select[2]  ; RegOut[3]   ; 4.138 ; 4.637 ; 4.856 ; 5.129 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
-----------------------------------------------
-; Fast 1100mV 85C Model Metastability Report ;
-----------------------------------------------
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -488,34 +616,54 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 3.114 ; 3.264 ; 3.597 ; 3.744 ;
-; A[0]       ; RegOut[1]   ; 3.248 ;       ;       ; 3.948 ;
-; A[1]       ; RegOut[1]   ; 3.583 ; 3.840 ; 4.125 ; 4.399 ;
-; A[1]       ; RegOut[2]   ; 3.573 ;       ;       ; 4.339 ;
-; A[2]       ; RegOut[2]   ; 3.386 ; 3.558 ; 3.857 ; 4.032 ;
-; A[2]       ; RegOut[3]   ; 2.920 ;       ;       ; 3.498 ;
-; A[3]       ; Carryout    ; 2.964 ;       ;       ; 3.681 ;
-; A[3]       ; RegOut[3]   ; 2.745 ; 2.861 ; 3.196 ; 3.315 ;
-; B[0]       ; RegOut[0]   ; 2.842 ; 3.009 ; 3.260 ; 3.402 ;
-; B[1]       ; RegOut[1]   ; 3.205 ; 3.455 ; 3.680 ; 3.947 ;
-; B[2]       ; RegOut[2]   ; 3.384 ; 3.584 ; 3.860 ; 4.077 ;
-; B[3]       ; RegOut[3]   ; 2.811 ; 2.962 ; 3.291 ; 3.459 ;
-; C[0]       ; RegOut[0]   ; 3.086 ;       ;       ; 3.747 ;
-; Select[0]  ; Carryout    ;       ; 3.472 ; 3.807 ;       ;
-; Select[0]  ; RegOut[0]   ; 3.225 ; 3.379 ; 3.789 ; 3.939 ;
-; Select[0]  ; RegOut[1]   ; 3.364 ; 3.589 ; 3.927 ; 4.148 ;
-; Select[0]  ; RegOut[2]   ; 3.354 ; 3.529 ; 3.917 ; 4.088 ;
-; Select[0]  ; RegOut[3]   ; 3.001 ; 3.120 ; 3.565 ; 3.680 ;
-; Select[1]  ; Carryout    ;       ; 3.548 ; 3.867 ;       ;
-; Select[1]  ; RegOut[0]   ; 3.447 ; 3.598 ; 3.973 ; 4.127 ;
-; Select[1]  ; RegOut[1]   ; 3.621 ; 3.843 ; 4.150 ; 4.375 ;
-; Select[1]  ; RegOut[2]   ; 3.434 ; 3.605 ; 3.977 ; 4.145 ;
-; Select[1]  ; RegOut[3]   ; 3.057 ; 3.172 ; 3.598 ; 3.710 ;
-; Select[2]  ; Carryout    ; 3.601 ;       ;       ; 4.392 ;
-; Select[2]  ; RegOut[0]   ; 3.653 ; 3.832 ; 4.225 ; 4.421 ;
-; Select[2]  ; RegOut[1]   ; 3.718 ; 3.956 ; 4.292 ; 4.505 ;
-; Select[2]  ; RegOut[2]   ; 3.708 ; 3.896 ; 4.282 ; 4.445 ;
-; Select[2]  ; RegOut[3]   ; 3.429 ; 3.573 ; 4.002 ; 4.163 ;
+; A[0]       ; Carryout    ; 2.986 ;       ;       ; 3.513 ;
+; A[0]       ; RegOut[0]   ; 3.310 ; 3.661 ; 3.700 ; 4.055 ;
+; A[0]       ; RegOut[1]   ; 2.521 ;       ;       ; 3.028 ;
+; A[0]       ; RegOut[2]   ; 3.076 ;       ;       ; 3.568 ;
+; A[0]       ; RegOut[3]   ; 3.625 ;       ;       ; 4.316 ;
+; A[1]       ; Carryout    ; 2.805 ;       ;       ; 3.368 ;
+; A[1]       ; RegOut[1]   ; 3.026 ; 3.108 ; 3.450 ; 3.514 ;
+; A[1]       ; RegOut[2]   ; 2.895 ;       ;       ; 3.423 ;
+; A[1]       ; RegOut[3]   ; 3.444 ;       ;       ; 4.171 ;
+; A[2]       ; Carryout    ; 2.738 ;       ;       ; 3.338 ;
+; A[2]       ; RegOut[2]   ; 3.073 ; 3.125 ; 3.530 ; 3.564 ;
+; A[2]       ; RegOut[3]   ; 3.285 ;       ;       ; 4.037 ;
+; A[3]       ; Carryout    ; 2.631 ;       ;       ; 3.224 ;
+; A[3]       ; RegOut[3]   ; 3.729 ; 4.046 ; 4.210 ; 4.524 ;
+; B[0]       ; Carryout    ; 3.071 ;       ;       ; 3.704 ;
+; B[0]       ; RegOut[0]   ; 3.447 ; 3.802 ; 3.911 ; 4.263 ;
+; B[0]       ; RegOut[1]   ; 2.732 ;       ;       ; 3.287 ;
+; B[0]       ; RegOut[2]   ; 3.161 ;       ;       ; 3.759 ;
+; B[0]       ; RegOut[3]   ; 3.710 ;       ;       ; 4.507 ;
+; B[1]       ; Carryout    ; 3.087 ;       ;       ; 3.727 ;
+; B[1]       ; RegOut[1]   ; 3.055 ; 3.157 ; 3.528 ; 3.654 ;
+; B[1]       ; RegOut[2]   ; 3.177 ;       ;       ; 3.782 ;
+; B[1]       ; RegOut[3]   ; 3.726 ;       ;       ; 4.530 ;
+; B[2]       ; Carryout    ; 2.670 ;       ;       ; 3.241 ;
+; B[2]       ; RegOut[2]   ; 3.070 ; 3.157 ; 3.545 ; 3.630 ;
+; B[2]       ; RegOut[3]   ; 3.344 ;       ;       ; 4.168 ;
+; B[3]       ; Carryout    ; 2.889 ;       ;       ; 3.485 ;
+; B[3]       ; RegOut[3]   ; 3.637 ; 3.954 ; 4.135 ; 4.457 ;
+; C          ; Carryout    ; 2.914 ;       ;       ; 3.543 ;
+; C          ; RegOut[0]   ; 3.272 ;       ;       ; 4.070 ;
+; C          ; RegOut[1]   ; 2.729 ;       ;       ; 3.336 ;
+; C          ; RegOut[2]   ; 3.004 ;       ;       ; 3.598 ;
+; C          ; RegOut[3]   ; 3.553 ;       ;       ; 4.346 ;
+; Select[0]  ; Carryout    ;       ; 3.089 ; 3.358 ;       ;
+; Select[0]  ; RegOut[0]   ; 3.233 ; 3.620 ; 3.639 ; 4.043 ;
+; Select[0]  ; RegOut[1]   ; 2.995 ; 3.109 ; 3.415 ; 3.532 ;
+; Select[0]  ; RegOut[2]   ; 2.935 ; 3.159 ; 3.389 ; 3.442 ;
+; Select[0]  ; RegOut[3]   ; 3.555 ; 3.905 ; 3.979 ; 4.243 ;
+; Select[1]  ; Carryout    ;       ; 3.082 ; 3.376 ;       ;
+; Select[1]  ; RegOut[0]   ; 3.223 ; 3.603 ; 3.619 ; 4.015 ;
+; Select[1]  ; RegOut[1]   ; 2.981 ; 3.098 ; 3.381 ; 3.496 ;
+; Select[1]  ; RegOut[2]   ; 2.871 ; 3.152 ; 3.407 ; 3.321 ;
+; Select[1]  ; RegOut[3]   ; 3.508 ; 3.898 ; 3.956 ; 4.190 ;
+; Select[2]  ; Carryout    ; 3.538 ;       ;       ; 4.245 ;
+; Select[2]  ; RegOut[0]   ; 3.814 ; 4.165 ; 4.419 ; 4.767 ;
+; Select[2]  ; RegOut[1]   ; 3.534 ; 3.652 ; 4.136 ; 4.261 ;
+; Select[2]  ; RegOut[2]   ; 3.569 ; 3.537 ; 4.050 ; 4.315 ;
+; Select[2]  ; RegOut[3]   ; 4.246 ; 4.561 ; 4.843 ; 5.160 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -524,40 +672,60 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 2.966 ; 3.097 ; 3.428 ; 3.557 ;
-; A[0]       ; RegOut[1]   ; 3.079 ;       ;       ; 3.724 ;
-; A[1]       ; RegOut[1]   ; 3.331 ; 3.536 ; 3.863 ; 4.026 ;
-; A[1]       ; RegOut[2]   ; 3.332 ;       ;       ; 3.995 ;
-; A[2]       ; RegOut[2]   ; 3.198 ; 3.361 ; 3.654 ; 3.813 ;
-; A[2]       ; RegOut[3]   ; 2.780 ;       ;       ; 3.357 ;
-; A[3]       ; Carryout    ; 2.779 ;       ;       ; 3.423 ;
-; A[3]       ; RegOut[3]   ; 2.607 ; 2.727 ; 3.047 ; 3.163 ;
-; B[0]       ; RegOut[0]   ; 2.707 ; 2.873 ; 3.124 ; 3.263 ;
-; B[1]       ; RegOut[1]   ; 2.995 ; 3.202 ; 3.474 ; 3.644 ;
-; B[2]       ; RegOut[2]   ; 3.168 ; 3.343 ; 3.645 ; 3.783 ;
-; B[3]       ; RegOut[3]   ; 2.644 ; 2.774 ; 3.140 ; 3.228 ;
-; C[0]       ; RegOut[0]   ; 2.911 ;       ;       ; 3.509 ;
-; Select[0]  ; Carryout    ;       ; 3.244 ; 3.555 ;       ;
-; Select[0]  ; RegOut[0]   ; 3.033 ; 3.174 ; 3.548 ; 3.686 ;
-; Select[0]  ; RegOut[1]   ; 3.150 ; 3.345 ; 3.666 ; 3.858 ;
-; Select[0]  ; RegOut[2]   ; 3.151 ; 3.314 ; 3.667 ; 3.827 ;
-; Select[0]  ; RegOut[3]   ; 2.830 ; 2.950 ; 3.346 ; 3.463 ;
-; Select[1]  ; Carryout    ;       ; 3.332 ; 3.633 ;       ;
-; Select[1]  ; RegOut[0]   ; 3.242 ; 3.383 ; 3.726 ; 3.863 ;
-; Select[1]  ; RegOut[1]   ; 3.391 ; 3.586 ; 3.878 ; 4.069 ;
-; Select[1]  ; RegOut[2]   ; 3.249 ; 3.402 ; 3.744 ; 3.895 ;
-; Select[1]  ; RegOut[3]   ; 2.907 ; 3.017 ; 3.400 ; 3.508 ;
-; Select[2]  ; Carryout    ; 3.366 ;       ;       ; 4.088 ;
-; Select[2]  ; RegOut[0]   ; 3.401 ; 3.554 ; 3.945 ; 4.061 ;
-; Select[2]  ; RegOut[1]   ; 3.473 ; 3.693 ; 3.993 ; 4.186 ;
-; Select[2]  ; RegOut[2]   ; 3.474 ; 3.662 ; 3.994 ; 4.155 ;
-; Select[2]  ; RegOut[3]   ; 3.198 ; 3.330 ; 3.743 ; 3.838 ;
+; A[0]       ; Carryout    ; 2.794 ;       ;       ; 3.291 ;
+; A[0]       ; RegOut[0]   ; 3.117 ; 3.433 ; 3.509 ; 3.821 ;
+; A[0]       ; RegOut[1]   ; 2.441 ;       ;       ; 2.937 ;
+; A[0]       ; RegOut[2]   ; 2.894 ;       ;       ; 3.392 ;
+; A[0]       ; RegOut[3]   ; 3.388 ;       ;       ; 4.056 ;
+; A[1]       ; Carryout    ; 2.640 ;       ;       ; 3.157 ;
+; A[1]       ; RegOut[1]   ; 2.822 ; 2.916 ; 3.223 ; 3.360 ;
+; A[1]       ; RegOut[2]   ; 2.461 ;       ;       ; 2.984 ;
+; A[1]       ; RegOut[3]   ; 3.234 ;       ;       ; 3.922 ;
+; A[2]       ; Carryout    ; 2.591 ;       ;       ; 3.138 ;
+; A[2]       ; RegOut[2]   ; 2.862 ; 2.938 ; 3.289 ; 3.408 ;
+; A[2]       ; RegOut[3]   ; 3.105 ;       ;       ; 3.826 ;
+; A[3]       ; Carryout    ; 2.524 ;       ;       ; 3.086 ;
+; A[3]       ; RegOut[3]   ; 3.487 ; 3.765 ; 3.940 ; 4.222 ;
+; B[0]       ; Carryout    ; 2.856 ;       ;       ; 3.413 ;
+; B[0]       ; RegOut[0]   ; 3.246 ; 3.562 ; 3.695 ; 4.008 ;
+; B[0]       ; RegOut[1]   ; 2.618 ;       ;       ; 3.174 ;
+; B[0]       ; RegOut[2]   ; 2.956 ;       ;       ; 3.514 ;
+; B[0]       ; RegOut[3]   ; 3.450 ;       ;       ; 4.178 ;
+; B[1]       ; Carryout    ; 2.879 ;       ;       ; 3.466 ;
+; B[1]       ; RegOut[1]   ; 2.898 ; 2.978 ; 3.349 ; 3.455 ;
+; B[1]       ; RegOut[2]   ; 2.979 ;       ;       ; 3.567 ;
+; B[1]       ; RegOut[3]   ; 3.473 ;       ;       ; 4.231 ;
+; B[2]       ; Carryout    ; 2.548 ;       ;       ; 3.114 ;
+; B[2]       ; RegOut[2]   ; 2.895 ; 2.982 ; 3.347 ; 3.438 ;
+; B[2]       ; RegOut[3]   ; 3.136 ;       ;       ; 3.877 ;
+; B[3]       ; Carryout    ; 2.756 ;       ;       ; 3.331 ;
+; B[3]       ; RegOut[3]   ; 3.428 ; 3.715 ; 3.904 ; 4.194 ;
+; C          ; Carryout    ; 2.730 ;       ;       ; 3.334 ;
+; C          ; RegOut[0]   ; 3.083 ;       ;       ; 3.849 ;
+; C          ; RegOut[1]   ; 2.590 ;       ;       ; 3.151 ;
+; C          ; RegOut[2]   ; 2.830 ;       ;       ; 3.435 ;
+; C          ; RegOut[3]   ; 3.324 ;       ;       ; 4.099 ;
+; Select[0]  ; Carryout    ;       ; 2.882 ; 3.202 ;       ;
+; Select[0]  ; RegOut[0]   ; 3.023 ; 3.349 ; 3.466 ; 3.749 ;
+; Select[0]  ; RegOut[1]   ; 2.828 ; 2.850 ; 3.172 ; 3.345 ;
+; Select[0]  ; RegOut[2]   ; 2.775 ; 2.862 ; 3.184 ; 3.274 ;
+; Select[0]  ; RegOut[3]   ; 3.295 ; 3.561 ; 3.695 ; 4.005 ;
+; Select[1]  ; Carryout    ;       ; 2.920 ; 3.205 ;       ;
+; Select[1]  ; RegOut[0]   ; 3.022 ; 3.350 ; 3.446 ; 3.737 ;
+; Select[1]  ; RegOut[1]   ; 2.824 ; 2.888 ; 3.175 ; 3.327 ;
+; Select[1]  ; RegOut[2]   ; 2.695 ; 2.770 ; 3.079 ; 3.190 ;
+; Select[1]  ; RegOut[3]   ; 3.267 ; 3.532 ; 3.652 ; 3.955 ;
+; Select[2]  ; Carryout    ; 3.336 ;       ;       ; 4.006 ;
+; Select[2]  ; RegOut[0]   ; 3.596 ; 3.902 ; 4.161 ; 4.465 ;
+; Select[2]  ; RegOut[1]   ; 3.306 ; 3.453 ; 3.901 ; 3.974 ;
+; Select[2]  ; RegOut[2]   ; 3.263 ; 3.360 ; 3.825 ; 3.924 ;
+; Select[2]  ; RegOut[3]   ; 3.842 ; 4.252 ; 4.533 ; 4.686 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
----------------------------------------------
-; Fast 1100mV 0C Model Metastability Report ;
----------------------------------------------
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -576,34 +744,54 @@ No synchronizer chains to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 5.388 ; 5.545 ; 5.600 ; 5.743 ;
-; A[0]       ; RegOut[1]   ; 5.591 ;       ;       ; 6.046 ;
-; A[1]       ; RegOut[1]   ; 6.171 ; 6.477 ; 6.459 ; 6.800 ;
-; A[1]       ; RegOut[2]   ; 6.249 ;       ;       ; 6.756 ;
-; A[2]       ; RegOut[2]   ; 6.059 ; 6.180 ; 6.244 ; 6.371 ;
-; A[2]       ; RegOut[3]   ; 5.131 ;       ;       ; 5.377 ;
-; A[3]       ; Carryout    ; 5.241 ;       ;       ; 5.690 ;
-; A[3]       ; RegOut[3]   ; 4.906 ; 4.968 ; 5.061 ; 5.129 ;
-; B[0]       ; RegOut[0]   ; 4.946 ; 5.138 ; 5.058 ; 5.200 ;
-; B[1]       ; RegOut[1]   ; 5.541 ; 5.848 ; 5.739 ; 6.079 ;
-; B[2]       ; RegOut[2]   ; 5.966 ; 6.151 ; 6.166 ; 6.384 ;
-; B[3]       ; RegOut[3]   ; 4.915 ; 5.040 ; 5.127 ; 5.287 ;
-; C[0]       ; RegOut[0]   ; 5.398 ;       ;       ; 5.812 ;
-; Select[0]  ; Carryout    ;       ; 5.881 ; 6.002 ;       ;
-; Select[0]  ; RegOut[0]   ; 5.621 ; 5.770 ; 5.941 ; 6.082 ;
-; Select[0]  ; RegOut[1]   ; 5.831 ; 6.081 ; 6.148 ; 6.390 ;
-; Select[0]  ; RegOut[2]   ; 5.908 ; 6.036 ; 6.227 ; 6.347 ;
-; Select[0]  ; RegOut[3]   ; 5.250 ; 5.319 ; 5.569 ; 5.630 ;
-; Select[1]  ; Carryout    ;       ; 5.985 ; 6.070 ;       ;
-; Select[1]  ; RegOut[0]   ; 6.096 ; 6.238 ; 6.353 ; 6.501 ;
-; Select[1]  ; RegOut[1]   ; 6.340 ; 6.583 ; 6.602 ; 6.851 ;
-; Select[1]  ; RegOut[2]   ; 6.003 ; 6.139 ; 6.295 ; 6.417 ;
-; Select[1]  ; RegOut[3]   ; 5.321 ; 5.398 ; 5.610 ; 5.673 ;
-; Select[2]  ; Carryout    ; 6.229 ;       ;       ; 6.716 ;
-; Select[2]  ; RegOut[0]   ; 6.319 ; 6.525 ; 6.621 ; 6.860 ;
-; Select[2]  ; RegOut[1]   ; 6.372 ; 6.665 ; 6.667 ; 6.910 ;
-; Select[2]  ; RegOut[2]   ; 6.450 ; 6.621 ; 6.745 ; 6.866 ;
-; Select[2]  ; RegOut[3]   ; 5.947 ; 6.073 ; 6.250 ; 6.409 ;
+; A[0]       ; Carryout    ; 5.354 ;       ;       ; 5.577 ;
+; A[0]       ; RegOut[0]   ; 5.767 ; 6.217 ; 5.846 ; 6.302 ;
+; A[0]       ; RegOut[1]   ; 4.350 ;       ;       ; 4.566 ;
+; A[0]       ; RegOut[2]   ; 5.566 ;       ;       ; 5.720 ;
+; A[0]       ; RegOut[3]   ; 6.449 ;       ;       ; 6.879 ;
+; A[1]       ; Carryout    ; 4.963 ;       ;       ; 5.237 ;
+; A[1]       ; RegOut[1]   ; 5.443 ; 5.526 ; 5.588 ; 5.637 ;
+; A[1]       ; RegOut[2]   ; 5.175 ;       ;       ; 5.380 ;
+; A[1]       ; RegOut[3]   ; 6.058 ;       ;       ; 6.539 ;
+; A[2]       ; Carryout    ; 4.809 ;       ;       ; 5.129 ;
+; A[2]       ; RegOut[2]   ; 5.470 ; 5.493 ; 5.637 ; 5.626 ;
+; A[2]       ; RegOut[3]   ; 5.666 ;       ;       ; 6.181 ;
+; A[3]       ; Carryout    ; 4.567 ;       ;       ; 4.866 ;
+; A[3]       ; RegOut[3]   ; 6.638 ; 7.069 ; 6.826 ; 7.250 ;
+; B[0]       ; Carryout    ; 5.496 ;       ;       ; 5.887 ;
+; B[0]       ; RegOut[0]   ; 6.028 ; 6.485 ; 6.196 ; 6.645 ;
+; B[0]       ; RegOut[1]   ; 4.775 ;       ;       ; 5.033 ;
+; B[0]       ; RegOut[2]   ; 5.708 ;       ;       ; 6.030 ;
+; B[0]       ; RegOut[3]   ; 6.591 ;       ;       ; 7.189 ;
+; B[1]       ; Carryout    ; 5.564 ;       ;       ; 5.955 ;
+; B[1]       ; RegOut[1]   ; 5.493 ; 5.589 ; 5.676 ; 5.822 ;
+; B[1]       ; RegOut[2]   ; 5.776 ;       ;       ; 6.098 ;
+; B[1]       ; RegOut[3]   ; 6.659 ;       ;       ; 7.257 ;
+; B[2]       ; Carryout    ; 4.683 ;       ;       ; 4.946 ;
+; B[2]       ; RegOut[2]   ; 5.535 ; 5.621 ; 5.717 ; 5.796 ;
+; B[2]       ; RegOut[3]   ; 5.828 ;       ;       ; 6.496 ;
+; B[3]       ; Carryout    ; 5.082 ;       ;       ; 5.398 ;
+; B[3]       ; RegOut[3]   ; 6.349 ; 6.763 ; 6.583 ; 7.015 ;
+; C          ; Carryout    ; 5.141 ;       ;       ; 5.568 ;
+; C          ; RegOut[0]   ; 5.625 ;       ;       ; 6.244 ;
+; C          ; RegOut[1]   ; 4.776 ;       ;       ; 5.157 ;
+; C          ; RegOut[2]   ; 5.353 ;       ;       ; 5.711 ;
+; C          ; RegOut[3]   ; 6.236 ;       ;       ; 6.870 ;
+; Select[0]  ; Carryout    ;       ; 5.441 ; 5.436 ;       ;
+; Select[0]  ; RegOut[0]   ; 5.623 ; 6.136 ; 5.735 ; 6.283 ;
+; Select[0]  ; RegOut[1]   ; 5.432 ; 5.570 ; 5.549 ; 5.695 ;
+; Select[0]  ; RegOut[2]   ; 5.267 ; 5.577 ; 5.461 ; 5.469 ;
+; Select[0]  ; RegOut[3]   ; 6.284 ; 6.736 ; 6.430 ; 6.763 ;
+; Select[1]  ; Carryout    ;       ; 5.421 ; 5.470 ;       ;
+; Select[1]  ; RegOut[0]   ; 5.555 ; 6.069 ; 5.667 ; 6.214 ;
+; Select[1]  ; RegOut[1]   ; 5.367 ; 5.513 ; 5.477 ; 5.616 ;
+; Select[1]  ; RegOut[2]   ; 5.103 ; 5.557 ; 5.495 ; 5.232 ;
+; Select[1]  ; RegOut[3]   ; 6.180 ; 6.716 ; 6.377 ; 6.657 ;
+; Select[2]  ; Carryout    ; 6.232 ;       ;       ; 6.693 ;
+; Select[2]  ; RegOut[0]   ; 6.521 ; 6.986 ; 6.921 ; 7.372 ;
+; Select[2]  ; RegOut[1]   ; 6.236 ; 6.367 ; 6.623 ; 6.768 ;
+; Select[2]  ; RegOut[2]   ; 6.257 ; 6.109 ; 6.426 ; 6.829 ;
+; Select[2]  ; RegOut[3]   ; 7.491 ; 7.914 ; 7.873 ; 8.304 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -612,34 +800,54 @@ No synchronizer chains to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; A[0]       ; RegOut[0]   ; 2.966 ; 3.097 ; 3.428 ; 3.557 ;
-; A[0]       ; RegOut[1]   ; 3.079 ;       ;       ; 3.724 ;
-; A[1]       ; RegOut[1]   ; 3.331 ; 3.536 ; 3.863 ; 4.026 ;
-; A[1]       ; RegOut[2]   ; 3.332 ;       ;       ; 3.995 ;
-; A[2]       ; RegOut[2]   ; 3.198 ; 3.361 ; 3.654 ; 3.813 ;
-; A[2]       ; RegOut[3]   ; 2.780 ;       ;       ; 3.357 ;
-; A[3]       ; Carryout    ; 2.779 ;       ;       ; 3.423 ;
-; A[3]       ; RegOut[3]   ; 2.607 ; 2.727 ; 3.047 ; 3.163 ;
-; B[0]       ; RegOut[0]   ; 2.707 ; 2.873 ; 3.124 ; 3.263 ;
-; B[1]       ; RegOut[1]   ; 2.995 ; 3.202 ; 3.474 ; 3.644 ;
-; B[2]       ; RegOut[2]   ; 3.168 ; 3.343 ; 3.645 ; 3.783 ;
-; B[3]       ; RegOut[3]   ; 2.644 ; 2.774 ; 3.140 ; 3.228 ;
-; C[0]       ; RegOut[0]   ; 2.911 ;       ;       ; 3.509 ;
-; Select[0]  ; Carryout    ;       ; 3.244 ; 3.555 ;       ;
-; Select[0]  ; RegOut[0]   ; 3.033 ; 3.174 ; 3.548 ; 3.686 ;
-; Select[0]  ; RegOut[1]   ; 3.150 ; 3.345 ; 3.666 ; 3.858 ;
-; Select[0]  ; RegOut[2]   ; 3.151 ; 3.314 ; 3.667 ; 3.827 ;
-; Select[0]  ; RegOut[3]   ; 2.830 ; 2.950 ; 3.346 ; 3.463 ;
-; Select[1]  ; Carryout    ;       ; 3.332 ; 3.633 ;       ;
-; Select[1]  ; RegOut[0]   ; 3.242 ; 3.383 ; 3.726 ; 3.863 ;
-; Select[1]  ; RegOut[1]   ; 3.391 ; 3.586 ; 3.878 ; 4.069 ;
-; Select[1]  ; RegOut[2]   ; 3.249 ; 3.402 ; 3.744 ; 3.895 ;
-; Select[1]  ; RegOut[3]   ; 2.907 ; 3.017 ; 3.400 ; 3.508 ;
-; Select[2]  ; Carryout    ; 3.366 ;       ;       ; 4.088 ;
-; Select[2]  ; RegOut[0]   ; 3.401 ; 3.554 ; 3.945 ; 4.061 ;
-; Select[2]  ; RegOut[1]   ; 3.473 ; 3.693 ; 3.993 ; 4.186 ;
-; Select[2]  ; RegOut[2]   ; 3.474 ; 3.662 ; 3.994 ; 4.155 ;
-; Select[2]  ; RegOut[3]   ; 3.198 ; 3.330 ; 3.743 ; 3.838 ;
+; A[0]       ; Carryout    ; 2.794 ;       ;       ; 3.291 ;
+; A[0]       ; RegOut[0]   ; 3.117 ; 3.433 ; 3.509 ; 3.821 ;
+; A[0]       ; RegOut[1]   ; 2.441 ;       ;       ; 2.937 ;
+; A[0]       ; RegOut[2]   ; 2.894 ;       ;       ; 3.392 ;
+; A[0]       ; RegOut[3]   ; 3.388 ;       ;       ; 4.056 ;
+; A[1]       ; Carryout    ; 2.640 ;       ;       ; 3.157 ;
+; A[1]       ; RegOut[1]   ; 2.822 ; 2.916 ; 3.223 ; 3.360 ;
+; A[1]       ; RegOut[2]   ; 2.461 ;       ;       ; 2.984 ;
+; A[1]       ; RegOut[3]   ; 3.234 ;       ;       ; 3.922 ;
+; A[2]       ; Carryout    ; 2.591 ;       ;       ; 3.138 ;
+; A[2]       ; RegOut[2]   ; 2.862 ; 2.938 ; 3.289 ; 3.408 ;
+; A[2]       ; RegOut[3]   ; 3.105 ;       ;       ; 3.826 ;
+; A[3]       ; Carryout    ; 2.524 ;       ;       ; 3.086 ;
+; A[3]       ; RegOut[3]   ; 3.487 ; 3.765 ; 3.940 ; 4.222 ;
+; B[0]       ; Carryout    ; 2.856 ;       ;       ; 3.413 ;
+; B[0]       ; RegOut[0]   ; 3.246 ; 3.562 ; 3.695 ; 4.008 ;
+; B[0]       ; RegOut[1]   ; 2.618 ;       ;       ; 3.174 ;
+; B[0]       ; RegOut[2]   ; 2.956 ;       ;       ; 3.514 ;
+; B[0]       ; RegOut[3]   ; 3.450 ;       ;       ; 4.178 ;
+; B[1]       ; Carryout    ; 2.879 ;       ;       ; 3.466 ;
+; B[1]       ; RegOut[1]   ; 2.898 ; 2.978 ; 3.349 ; 3.455 ;
+; B[1]       ; RegOut[2]   ; 2.979 ;       ;       ; 3.567 ;
+; B[1]       ; RegOut[3]   ; 3.473 ;       ;       ; 4.231 ;
+; B[2]       ; Carryout    ; 2.548 ;       ;       ; 3.114 ;
+; B[2]       ; RegOut[2]   ; 2.895 ; 2.982 ; 3.347 ; 3.438 ;
+; B[2]       ; RegOut[3]   ; 3.136 ;       ;       ; 3.877 ;
+; B[3]       ; Carryout    ; 2.756 ;       ;       ; 3.331 ;
+; B[3]       ; RegOut[3]   ; 3.428 ; 3.715 ; 3.904 ; 4.194 ;
+; C          ; Carryout    ; 2.730 ;       ;       ; 3.334 ;
+; C          ; RegOut[0]   ; 3.083 ;       ;       ; 3.849 ;
+; C          ; RegOut[1]   ; 2.590 ;       ;       ; 3.151 ;
+; C          ; RegOut[2]   ; 2.830 ;       ;       ; 3.435 ;
+; C          ; RegOut[3]   ; 3.324 ;       ;       ; 4.099 ;
+; Select[0]  ; Carryout    ;       ; 2.882 ; 3.202 ;       ;
+; Select[0]  ; RegOut[0]   ; 3.023 ; 3.349 ; 3.466 ; 3.749 ;
+; Select[0]  ; RegOut[1]   ; 2.828 ; 2.850 ; 3.172 ; 3.345 ;
+; Select[0]  ; RegOut[2]   ; 2.775 ; 2.862 ; 3.184 ; 3.274 ;
+; Select[0]  ; RegOut[3]   ; 3.295 ; 3.561 ; 3.695 ; 4.005 ;
+; Select[1]  ; Carryout    ;       ; 2.920 ; 3.205 ;       ;
+; Select[1]  ; RegOut[0]   ; 3.022 ; 3.350 ; 3.446 ; 3.737 ;
+; Select[1]  ; RegOut[1]   ; 2.824 ; 2.888 ; 3.175 ; 3.327 ;
+; Select[1]  ; RegOut[2]   ; 2.695 ; 2.770 ; 3.079 ; 3.190 ;
+; Select[1]  ; RegOut[3]   ; 3.267 ; 3.532 ; 3.652 ; 3.955 ;
+; Select[2]  ; Carryout    ; 3.336 ;       ;       ; 4.006 ;
+; Select[2]  ; RegOut[0]   ; 3.596 ; 3.902 ; 4.161 ; 4.465 ;
+; Select[2]  ; RegOut[1]   ; 3.306 ; 3.453 ; 3.901 ; 3.974 ;
+; Select[2]  ; RegOut[2]   ; 3.263 ; 3.360 ; 3.825 ; 3.924 ;
+; Select[2]  ; RegOut[3]   ; 3.842 ; 4.252 ; 4.533 ; 4.686 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -661,9 +869,6 @@ No synchronizer chains to report.
 +-----------+--------------+-----------------+-----------------+
 ; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-----------+--------------+-----------------+-----------------+
-; C[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; C[2]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; C[3]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clock     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; Select[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -671,7 +876,7 @@ No synchronizer chains to report.
 ; Select[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; A[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; B[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; C[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; C         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; A[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; B[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; A[2]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -686,11 +891,11 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin       ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; RegOut[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -699,11 +904,11 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin       ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; RegOut[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -712,11 +917,11 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin       ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; RegOut[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -725,11 +930,11 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin       ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; RegOut[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; RegOut[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; RegOut[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; RegOut[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; Carryout  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -759,9 +964,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 28    ; 28   ;
+; Unconstrained Input Port Paths  ; 48    ; 48   ;
 ; Unconstrained Output Ports      ; 5     ; 5    ;
-; Unconstrained Output Port Paths ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
 +---------------------------------+-------+------+
 
 
@@ -770,11 +975,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Sep 14 19:48:17 2015
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Tue Sep 15 13:43:06 2015
 Info: Command: quartus_sta Lab2Problem2 -c Lab2Problem2
-Info: qsta_default_script.tcl version: #1
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info: qsta_default_script.tcl version: #11
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab2Problem2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -794,7 +999,6 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
-Warning (334000): Timing characteristics of device 5CSEMA4U23C6 are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -808,7 +1012,6 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
-Warning (334000): Timing characteristics of device 5CSEMA4U23C6 are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -831,10 +1034,10 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 723 megabytes
-    Info: Processing ended: Mon Sep 14 19:48:23 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 983 megabytes
+    Info: Processing ended: Tue Sep 15 13:43:14 2015
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 

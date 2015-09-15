@@ -1,19 +1,20 @@
-module fulladder3bits(inA, inB, cin, cout, sum);
-	input [3:0] inA;
-	input [3:0] inB;
+// synthesis VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+module fulladder4bits(inA, inB, cin, cout, sum);
+	input inA [3:0];
+	input inB [3:0];
 	input cin;
 	output cout;
-	output [3:0] sum;
+	output sum [3:0];
 	
 	// input/output wires
-	wire [3:0] inA;
-	wire [3:0] inB;
+	wire inA [3:0];
+	wire inB [3:0];
 	wire cin;
 	wire cout;
-	wire [3:0] sum;
+	wire sum [3:0];
 	
 	//intermediate carries
-	wire [2:0] carry;
+	wire carry [2:0];
 	
 	fulladder add0 (
 		sum[0],

@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/CODE/Embedded Systems/ImportModulesExample/child.v
+source_file = 1, C:/CODE/Embedded Systems/ImportModulesExample/parent.v
+source_file = 1, C:/CODE/Embedded Systems/ImportModulesExample/parent.sv
+source_file = 1, C:/CODE/Embedded Systems/ImportModulesExample/child.sv
+source_file = 1, C:/CODE/Embedded Systems/ImportModulesExample/db/ImportModulesExample.cbx.xml
+design_name = parent
+instance = comp, \returned[0]~output , returned[0]~output, parent, 1
+instance = comp, \returned[1]~output , returned[1]~output, parent, 1
+instance = comp, \returned[2]~output , returned[2]~output, parent, 1
+instance = comp, \returned[3]~output , returned[3]~output, parent, 1
+instance = comp, \data[0]~input , data[0]~input, parent, 1
+instance = comp, \data[1]~input , data[1]~input, parent, 1
+instance = comp, \data[2]~input , data[2]~input, parent, 1
+instance = comp, \data[3]~input , data[3]~input, parent, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, parent, 1
