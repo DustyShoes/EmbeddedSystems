@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CODE/Embedded Systems/Lab2Problem2/simulation/modelsim
+vtestbench
+DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+!s110 1442417472
+!i10b 1
+!s100 AghkPB?Ob;1W4Mmb4af8O0
+I?;N:ZdP4PYOn7SVjU2m_o1
+V`JN@9S9cnhjKRR_L]QIcM3
+!s105 testbench_sv_unit
+S1
+R0
+w1442415559
+8C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv
+FC:/CODE/Embedded Systems/Lab2Problem2/testbench.sv
+L0 2
+OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1442417472.459000
+!s107 C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv|
+!s90 -reportprogress|300|-work|work|C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv|
+!i113 1
+o-work work

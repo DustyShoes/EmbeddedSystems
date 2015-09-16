@@ -15,7 +15,7 @@ module fulladder4bits(inA, inB, cin, cout, sum);
 	
 	//intermediate carries
 	wire carry [2:0];
-	
+
 	fulladder add0 (
 		sum[0],
 		carry[0],

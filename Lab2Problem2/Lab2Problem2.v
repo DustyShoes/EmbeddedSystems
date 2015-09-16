@@ -1,27 +1,27 @@
 ////`include "fulladder.v"
 //module Lab2Problem2 (Select, A, B, C, RegOut, Carryout, clock, reset);
 //
-//input [2:0] Select;
-//input [3:0] A;
-//input [3:0] B;
-//input [3:0] C;
+//input Select [2:0];
+//input A [3:0];
+//input B [3:0];
+//input C; //carry in, not 4 bits like the others
 //input clock;
 //input reset;
 //
-//output [3:0] RegOut;
+//output RegOut [3:0];
 //output Carryout;
 //
-//wire [2:0] Select;
-//wire [3:0] A;
-//wire [3:0] B;
-//wire [3:0] C;
+//wire Select [2:0];
+//wire A [3:0];
+//wire B [3:0];
+//wire C;
 //wire clock;
 //wire reset;
-//wire [3:0] RegOut;
+//wire RegOut [3:0];
 //wire Carryout;
 //
 ////inverse select
-//wire nSelect[2:0];
+//wire nSelect [2:0];
 //
 ////alu modes
 //wire zero;
@@ -46,8 +46,8 @@
 //and #10 (seven, nSelect[0], Select[1], Select[2]);
 //
 ////mode zero 000 - not A
-//wire RegOutZero[3:0];
-//wire notA[3:0];
+//wire RegOutZero [3:0];
+//wire notA [3:0];
 //not #20 (notA[0], A[0]);
 //not #20 (notA[1], A[1]);
 //not #20 (notA[2], A[2]);
@@ -59,24 +59,15 @@
 //
 ////mode one 001 - A+B+C
 //wire RegOutOne [3:0];
-//wire sumAB [3:0];
-//wire carryAB;
-//wire sumABC[3:0];
-//wire carryABC;
 //wire CarryoutOne;
-//fulladder3bits fulladderAB (
+//wire carryABC;
+//wire sumABC [3:0];
+//fulladder4bits fulladderAB (
 //	.inA(A),
 //	.inB(B),
-//	.cin(0),
-//	.cout(carryAB),
-//	.sum(sumAB)
-//);
-//fulladder3bits #100 fulladderABC (
-//	.inA(sumABin),
-//	.inB(C),
-//	.cin(carryAB),
-//	.cout(CarryoutOne),
-//	.sum(RegOutOne)
+//	.cin(C),
+//	.cout(carryABC),
+//	.sum(sumABC)
 //);
 //and #200 (RegOutOne[0], sumABC[0], one);
 //and #200 (RegOutOne[1], sumABC[1], one);
@@ -85,8 +76,8 @@
 //and #200 (CarryoutOne, carryABC, one);
 //
 ////mode two 010 - A and B
-//wire RegOutTwo[3:0];
-//wire andAB[3:0];
+//wire RegOutTwo [3:0];
+//wire andAB [3:0];
 //and #20 (andAB[0], A[0], B[0]);
 //and #20 (andAB[1], A[1], B[1]);
 //and #20 (andAB[2], A[2], B[2]);
@@ -97,8 +88,8 @@
 //and #30 (RegOutTwo[3], andAB[3], two);
 //
 ////mode three 011 - A or B
-//wire RegOutThree[3:0];
-//wire orAB[3:0];
+//wire RegOutThree [3:0];
+//wire orAB [3:0];
 //or #20 (orAB[0], A[0], B[0]);
 //or #20 (orAB[1], A[1], B[1]);
 //or #20 (orAB[2], A[2], B[2]);
@@ -109,8 +100,8 @@
 //and #30 (RegOutThree[3], orAB[3], three);
 //
 ////mode four 100 - A xor B
-//wire RegOutFour[3:0];
-//wire xorAB[3:0];
+//wire RegOutFour [3:0];
+//wire xorAB [3:0];
 //xor #20 (xorAB[0], A[0], B[0]);
 //xor #20 (xorAB[1], A[1], B[1]);
 //xor #20 (xorAB[2], A[2], B[2]);
@@ -121,23 +112,23 @@
 //xor #30 (RegOutFour[3], xorAB[3], four);
 //
 ////mode five 101 - rotate A
-//wire RegOutFive[3:0];
+//wire RegOutFive [3:0];
 //wire CarryoutFive;
-//and #20 (RegOutFive[0], C[0], five);
+//and #20 (RegOutFive[0], C, five);
 //and #20 (RegOutFive[1], A[0], five);
 //and #20 (RegOutFive[2], A[1], five);
 //and #20 (RegOutFive[3], A[2], five);
 //and #20 (CarryoutFive, A[3], five);
 //
 ////mode six 110 - 0
-//wire RegOutSix[3:0];
+//wire RegOutSix [3:0];
 //and #20 (RegOutSix[0], 0, six);
 //and #20 (RegOutSix[1], 0, six);
 //and #20 (RegOutSix[2], 0, six);
 //and #20 (RegOutSix[3], 0, six);
 //
 ////mode seven 111 - 1
-//wire RegOutSeven[3:0];
+//wire RegOutSeven [3:0];
 //and #20 (RegOutSeven[0], 1, seven);
 //and #20 (RegOutSeven[1], 1, seven);
 //and #20 (RegOutSeven[2], 1, seven);
