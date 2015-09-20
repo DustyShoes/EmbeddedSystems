@@ -20,24 +20,3 @@
 # "if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }"
-vlog -reportprogress 300 -work work {C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 11:31:12 on Sep 16,2015
-# vlog -reportprogress 300 -work work C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 11:31:12 on Sep 16,2015, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim +altera -do Lab2Problem2_run_msim_rtl_verilog.do -l msim_transcript -gui work.testbench
-# vsim -gui "+altera" -l msim_transcript -do "Lab2Problem2_run_msim_rtl_verilog.do" 
-# Start time: 11:35:33 on Sep 16,2015
-# Loading sv_std.std
-# Loading work.testbench
-# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv(16): Instantiation of 'Lab2Problem2' failed. The design unit was not found.
-# 
-#         Region: /testbench
-#         Searched libraries:
-#             C:/CODE/Embedded Systems/Lab2Problem2/simulation/modelsim/work
-# Error loading design
