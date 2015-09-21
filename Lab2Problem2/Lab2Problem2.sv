@@ -1,7 +1,7 @@
 //`include "fulladder.v"
-module Lab2Problem2 (Select, A, B, C, RegOut, Carryout, clock, reset);
+module Lab2Problem2 (modeSelect, A, B, C, RegOut, Carryout, clock, reset);
 
-input Select [2:0];
+input modeSelect [2:0];
 input A [3:0];
 input B [3:0];
 input C; //carry in, not 4 bits like the others
@@ -11,7 +11,7 @@ input reset;
 output RegOut [3:0];
 output Carryout;
 
-wire Select [2:0];
+wire modeSelect [2:0];
 wire A [3:0];
 wire B [3:0];
 wire C;
@@ -20,7 +20,11 @@ wire reset;
 wire RegOut [3:0];
 wire Carryout;
 
-//inverse select
+//inverse reset
+wire nReset;
+
+//select and not select bits (goes into demultiplexer, and depends on modeSelect input)
+wire Select [2:0];
 wire nSelect [2:0];
 
 //alu modes
@@ -33,6 +37,13 @@ wire five;
 wire six;
 wire seven;
 
+//if reset = 1, reset the outputs. This is done by setting Select = 110
+not (nReset, reset);
+and #5 (Select[0], nReset, modeSelect[0]);
+and #5 (Select[1], nReset, modeSelect[1]);
+and #5 (Select[2], nReset, modeSelect[2]);
+
+//specify the method select. Demultiplexer that takes in 3 Select bits and eight output wires.
 not (nSelect[0], Select[0]);
 not (nSelect[1], Select[1]);
 not (nSelect[2], Select[2]);

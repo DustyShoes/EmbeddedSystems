@@ -1,25 +1,7 @@
 |Lab2Problem2
-Select[0] => WideAnd0.IN0
-Select[0] => WideAnd1.IN0
-Select[0] => WideAnd2.IN0
-Select[0] => WideAnd3.IN0
-Select[0] => WideAnd4.IN0
-Select[0] => WideAnd5.IN0
-Select[0] => WideAnd7.IN0
-Select[1] => WideAnd2.IN1
-Select[1] => WideAnd3.IN1
-Select[1] => WideAnd7.IN1
-Select[1] => WideAnd0.IN1
-Select[1] => WideAnd1.IN1
-Select[1] => WideAnd4.IN1
-Select[1] => WideAnd5.IN1
-Select[2] => WideAnd1.IN2
-Select[2] => WideAnd3.IN2
-Select[2] => WideAnd5.IN2
-Select[2] => WideAnd7.IN2
-Select[2] => WideAnd0.IN2
-Select[2] => WideAnd2.IN2
-Select[2] => WideAnd4.IN2
+modeSelect[0] => Select[0].IN0
+modeSelect[1] => Select[1].IN0
+modeSelect[2] => Select[2].IN0
 A[0] => fulladder4bits:fulladderAB.inA[0]
 A[0] => andAB[0].IN0
 A[0] => orAB[0].IN0
@@ -68,7 +50,9 @@ RegOut[2] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 RegOut[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 Carryout << comb.DB_MAX_OUTPUT_PORT_TYPE
 clock => ~NO_FANOUT~
-reset => ~NO_FANOUT~
+reset => Select[0].IN1
+reset => Select[1].IN1
+reset => Select[2].IN1
 
 
 |Lab2Problem2|fulladder4bits:fulladderAB
