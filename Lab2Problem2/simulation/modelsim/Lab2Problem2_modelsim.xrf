@@ -5,6 +5,7 @@ source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/fulladderTestBench.v
 source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/Lab2Problem2.sv
 source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/fulladder4bits.v
 source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/testbench.sv
+source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/fulladder4bits.sv
 source_file = 1, C:/CODE/Embedded Systems/Lab2Problem2/db/Lab2Problem2.cbx.xml
 design_name = Lab2Problem2
 instance = comp, \RegOut[0]~output\, RegOut[0]~output, Lab2Problem2, 1
