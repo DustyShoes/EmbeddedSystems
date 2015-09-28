@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2Problem2
-Mon Sep 21 17:02:27 2015
+Mon Sep 28 19:24:22 2015
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 21 17:02:27 2015      ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 28 19:24:22 2015      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; Lab2Problem2                               ;
 ; Top-level Entity Name           ; Lab2Problem2                               ;
@@ -179,31 +179,31 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 8          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 11         ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 5          ;
-;     -- 5 input functions                    ; 3          ;
-;     -- 4 input functions                    ; 2          ;
-;     -- <=3 input functions                  ; 1          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 19         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; WideAnd1~0 ;
-; Maximum fan-out                             ; 5          ;
-; Total fan-out                               ; 80         ;
-; Average fan-out                             ; 1.63       ;
-+---------------------------------------------+------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 13                  ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 17                  ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 8                   ;
+;     -- 5 input functions                    ; 5                   ;
+;     -- 4 input functions                    ; 2                   ;
+;     -- <=3 input functions                  ; 2                   ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 19                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; modeSelect[1]~input ;
+; Maximum fan-out                             ; 7                   ;
+; Total fan-out                               ; 109                 ;
+; Average fan-out                             ; 1.98                ;
++---------------------------------------------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,9 +211,10 @@ agreement for further details.
 +---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------+--------------+
-; |Lab2Problem2                   ; 11 (10)           ; 0 (0)        ; 0                 ; 0          ; 19   ; 0            ; |Lab2Problem2                                           ; work         ;
-;    |fulladder4bits:fulladderAB| ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Lab2Problem2|fulladder4bits:fulladderAB                ; work         ;
-;       |fulladder:add1|          ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Lab2Problem2|fulladder4bits:fulladderAB|fulladder:add1 ; work         ;
+; |Lab2Problem2                   ; 17 (14)           ; 0 (0)        ; 0                 ; 0          ; 19   ; 0            ; |Lab2Problem2                                           ; work         ;
+;    |fulladder4bits:fulladderAB| ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Lab2Problem2|fulladder4bits:fulladderAB                ; work         ;
+;       |fulladder:add1|          ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Lab2Problem2|fulladder4bits:fulladderAB|fulladder:add1 ; work         ;
+;       |fulladder:add3|          ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Lab2Problem2|fulladder4bits:fulladderAB|fulladder:add3 ; work         ;
 +---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,16 +239,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
-;         3 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 17                          ;
+;     normal            ; 17                          ;
+;         2 data inputs ; 2                           ;
 ;         4 data inputs ; 2                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 5                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 8                           ;
 ; boundary_port         ; 19                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 2.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -266,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Sep 21 17:02:11 2015
+    Info: Processing started: Mon Sep 28 19:24:02 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2Problem2 -c Lab2Problem2
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 0 design units, including 0 entities, in source file lab2problem2.v
@@ -281,6 +282,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: testbench
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder4bits.sv
     Info (12023): Found entity 1: fulladder4bits
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder4bits_testbench.sv
+    Info (12023): Found entity 1: fulladder4bits_TestBench
 Info (12127): Elaborating entity "Lab2Problem2" for the top level hierarchy
 Warning (10739): Verilog HDL warning at Lab2Problem2.sv(136): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at Lab2Problem2.sv(137): actual bit length 32 differs from formal bit length 1
@@ -297,14 +300,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock"
-Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 11 logic cells
+    Info (21061): Implemented 17 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 735 megabytes
-    Info: Processing ended: Mon Sep 21 17:02:27 2015
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 736 megabytes
+    Info: Processing ended: Mon Sep 28 19:24:22 2015
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:47
 
 

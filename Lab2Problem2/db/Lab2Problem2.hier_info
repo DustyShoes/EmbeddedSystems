@@ -44,11 +44,11 @@ B[3] => orAB[3].IN1
 B[3] => xorAB[3].IN1
 C => fulladder4bits:fulladderAB.cin
 C => RegOutFive[0].IN1
-RegOut[0] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[1] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[2] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-RegOut[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Carryout << comb.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+RegOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Carryout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 clock => ~NO_FANOUT~
 reset => Select[0].IN1
 reset => Select[1].IN1

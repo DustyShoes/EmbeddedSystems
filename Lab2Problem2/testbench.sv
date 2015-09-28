@@ -11,8 +11,8 @@ reg reset;
 // Outputs
 wire out [3:0];
 wire cout;
-wire formatOut [4:0];
-wire [4:0] expectedOut;
+//wire formatOut [4:0];
+//wire [4:0] expectedOut;
 
 // Instantiate the unit under test
 Lab2Problem2 test (
@@ -121,8 +121,8 @@ initial begin
 	
 	//010 A and B
 	Select[0] = 0;
-	Select[1] = 0;
-	Select[2] = 1;
+	Select[1] = 1;
+	Select[2] = 0;
 	A[0] = 0;
 	A[1] = 0;
 	A[2] = 0;
