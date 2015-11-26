@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><altera_monitor_program_project version="1.0">
+    <architecture>Nios II</architecture>
+    <system>
+        <sample_system_title>DE0-Nano-SoC Computer for Nios II</sample_system_title>
+        <cable>null</cable>
+        <processor>Nios2</processor>
+        <reset_processor_during_load>false</reset_processor_during_load>
+        <terminal>JTAG_UART</terminal>
+    </system>
+    <program>
+        <type>No Program</type>
+    </program>
+</altera_monitor_program_project>
