@@ -1,0 +1,3 @@
+Cyclone V board configuration (search for in setup)
+
+5csema4u23c6
