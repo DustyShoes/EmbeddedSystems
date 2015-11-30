@@ -2923,6 +2923,7 @@ module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci (
     end
 
 
+  /* HEY - THIS ISN'T SUPPOSED TO BE COMMENTED!!!
   BoardConfigQsys_nios2_gen2_0_cpu_debug_slave_wrapper the_BoardConfigQsys_nios2_gen2_0_cpu_debug_slave_wrapper
     (
       .MonDReg                 (MonDReg),
@@ -2958,7 +2959,7 @@ module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci (
       .trc_wrap                (trc_wrap),
       .trigbrktype             (trigbrktype),
       .trigger_state_1         (trigger_state_1)
-    );
+    );*/
 
   //dummy sink, which is an e_mux
   assign dummy_sink = tr_data |
@@ -3657,6 +3658,7 @@ module BoardConfigQsys_nios2_gen2_0_cpu (
   wire             test_has_ended;
   reg              wait_for_one_post_bret_inst;
   //the_BoardConfigQsys_nios2_gen2_0_cpu_test_bench, which is an e_instance
+  /* HEY - THIS ISN'T SUPPOSED TO BE COMMENTED!!!
   BoardConfigQsys_nios2_gen2_0_cpu_test_bench the_BoardConfigQsys_nios2_gen2_0_cpu_test_bench
     (
       .D_iw                          (D_iw),
@@ -3686,7 +3688,7 @@ module BoardConfigQsys_nios2_gen2_0_cpu (
       .i_waitrequest                 (i_waitrequest),
       .reset_n                       (reset_n),
       .test_has_ended                (test_has_ended)
-    );
+    );*/
 
   assign F_av_iw_a = F_av_iw[31 : 27];
   assign F_av_iw_b = F_av_iw[26 : 22];

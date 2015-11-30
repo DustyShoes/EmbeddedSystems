@@ -1,0 +1,452 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab4SDRAM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/CODE/Embedded\ Systems/Lab4SDRAM {C:/CODE/Embedded Systems/Lab4SDRAM/lights.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:14:15 on Nov 30,2015
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/CODE/Embedded Systems/Lab4SDRAM" C:/CODE/Embedded Systems/Lab4SDRAM/lights.v 
+# -- Compiling module lights
+# 
+# Top level modules:
+# 	lights
+# End time: 11:14:16 on Nov 30,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/CODE/Embedded\ Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules {C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:14:16 on Nov 30,2015
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules" C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v 
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_performance_monitors
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# -- Compiling module BoardConfigQsys_nios2_gen2_0_cpu
+# 
+# Top level modules:
+# 	BoardConfigQsys_nios2_gen2_0_cpu_nios2_performance_monitors
+# 	BoardConfigQsys_nios2_gen2_0_cpu
+# End time: 11:14:16 on Nov 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.lights
+# vsim -gui "+altera" -l msim_transcript -do "Lab4SDRAM_run_msim_rtl_verilog.do" 
+# Start time: 11:15:00 on Nov 30,2015
+# Loading work.lights
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu
+# vsim 
+# Start time: 11:15:06 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# vsim 
+# Start time: 11:15:07 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+vsim work.lights
+# vsim 
+# Start time: 11:15:19 on Nov 30,2015
+# Loading work.lights
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu
+# vsim 
+# Start time: 11:15:24 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu
+# vsim 
+# Start time: 11:17:05 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# vsim 
+# Start time: 11:17:14 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace/atm
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.lights
+# vsim 
+# Start time: 11:17:50 on Nov 30,2015
+# Loading work.lights
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /lights/NiosII/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu
+# vsim 
+# Start time: 11:17:59 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(49): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_a
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(114): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/BoardConfigQsys_nios2_gen2_0_cpu_register_bank_b
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(211): Instantiation of 'altera_std_synchronizer' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+# ** Error: (vsim-3033) C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v(2299): Instantiation of 'altsyncram' failed. The design unit was not found.
+# 
+#         Region: /BoardConfigQsys_nios2_gen2_0_cpu/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_oci/the_BoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem/BoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram
+#         Searched libraries:
+#             C:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim/rtl_work
+# Error loading design
+vsim work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+# vsim 
+# Start time: 11:18:01 on Nov 30,2015
+# Loading work.BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+run
+run
+run
+run
+add wave -position end  sim:/BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg/reset_n
+add wave -position end  sim:/BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg/clk
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg/write
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/BoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg/address
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# WARNING: No extended dataflow license exists
+# End time: 11:58:35 on Nov 30,2015, Elapsed time: 0:40:34
+# Errors: 0, Warnings: 1

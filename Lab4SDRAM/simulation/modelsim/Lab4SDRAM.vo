@@ -1,0 +1,1103 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 15.0.0 Build 145 04/22/2015 SJ Web Edition"
+
+// DATE "11/30/2015 10:57:55"
+
+// 
+// Device: Altera 5CSEMA4U23C6 Package UFBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module lights (
+	SW,
+	KEY,
+	CLOCK_50,
+	LED,
+	DRAM_CLK,
+	DRAM_CKE,
+	DRAM_ADDR,
+	DRAM_BA,
+	DRAM_CS_N,
+	DRAM_CAS_N,
+	DRAM_RAS_N,
+	DRAM_WE_N,
+	DRAM_DQ,
+	DRAM_DQM);
+input 	[3:0] SW;
+input 	[0:0] KEY;
+input 	CLOCK_50;
+output 	[3:0] LED;
+output 	DRAM_CLK;
+output 	DRAM_CKE;
+output 	[12:0] DRAM_ADDR;
+output 	[1:0] DRAM_BA;
+output 	DRAM_CS_N;
+output 	DRAM_CAS_N;
+output 	DRAM_RAS_N;
+output 	DRAM_WE_N;
+output 	[15:0] DRAM_DQ;
+output 	[1:0] DRAM_DQM;
+
+// Design Ports Information
+// SW[0]	=>  Location: PIN_AC23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SW[1]	=>  Location: PIN_AG24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SW[2]	=>  Location: PIN_AH16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SW[3]	=>  Location: PIN_AF7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[0]	=>  Location: PIN_T11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED[0]	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED[1]	=>  Location: PIN_Y13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED[2]	=>  Location: PIN_T12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LED[3]	=>  Location: PIN_W12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_CLK	=>  Location: PIN_AE26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_CKE	=>  Location: PIN_W15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[0]	=>  Location: PIN_AD17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[1]	=>  Location: PIN_AF13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[2]	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[3]	=>  Location: PIN_AD11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[4]	=>  Location: PIN_AA23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[5]	=>  Location: PIN_Y19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[6]	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[7]	=>  Location: PIN_AA20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[8]	=>  Location: PIN_AF6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[9]	=>  Location: PIN_V13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[10]	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[11]	=>  Location: PIN_AH3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_ADDR[12]	=>  Location: PIN_Y11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_BA[0]	=>  Location: PIN_H6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_BA[1]	=>  Location: PIN_U10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_CS_N	=>  Location: PIN_W14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_CAS_N	=>  Location: PIN_Y17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_RAS_N	=>  Location: PIN_AA4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_WE_N	=>  Location: PIN_AG25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQM[0]	=>  Location: PIN_AH11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQM[1]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[0]	=>  Location: PIN_W11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[1]	=>  Location: PIN_AF17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[2]	=>  Location: PIN_AG5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[3]	=>  Location: PIN_AF20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[4]	=>  Location: PIN_AF9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[5]	=>  Location: PIN_Y15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[6]	=>  Location: PIN_AF8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[7]	=>  Location: PIN_AG14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[8]	=>  Location: PIN_AH17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[9]	=>  Location: PIN_AH2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[10]	=>  Location: PIN_AH6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[11]	=>  Location: PIN_U11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[12]	=>  Location: PIN_AG26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[13]	=>  Location: PIN_AH22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[14]	=>  Location: PIN_H5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DRAM_DQ[15]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLOCK_50	=>  Location: PIN_AF26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \SW[0]~input_o ;
+wire \SW[1]~input_o ;
+wire \SW[2]~input_o ;
+wire \SW[3]~input_o ;
+wire \KEY[0]~input_o ;
+wire \DRAM_DQ[0]~input_o ;
+wire \DRAM_DQ[1]~input_o ;
+wire \DRAM_DQ[2]~input_o ;
+wire \DRAM_DQ[3]~input_o ;
+wire \DRAM_DQ[4]~input_o ;
+wire \DRAM_DQ[5]~input_o ;
+wire \DRAM_DQ[6]~input_o ;
+wire \DRAM_DQ[7]~input_o ;
+wire \DRAM_DQ[8]~input_o ;
+wire \DRAM_DQ[9]~input_o ;
+wire \DRAM_DQ[10]~input_o ;
+wire \DRAM_DQ[11]~input_o ;
+wire \DRAM_DQ[12]~input_o ;
+wire \DRAM_DQ[13]~input_o ;
+wire \DRAM_DQ[14]~input_o ;
+wire \DRAM_DQ[15]~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \CLOCK_50~input_o ;
+
+
+// Location: IOOBUF_X68_Y12_N5
+cyclonev_io_obuf \LED[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LED[0]),
+	.obar());
+// synopsys translate_off
+defparam \LED[0]~output .bus_hold = "false";
+defparam \LED[0]~output .open_drain_output = "false";
+defparam \LED[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N2
+cyclonev_io_obuf \LED[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LED[1]),
+	.obar());
+// synopsys translate_off
+defparam \LED[1]~output .bus_hold = "false";
+defparam \LED[1]~output .open_drain_output = "false";
+defparam \LED[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N19
+cyclonev_io_obuf \LED[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LED[2]),
+	.obar());
+// synopsys translate_off
+defparam \LED[2]~output .bus_hold = "false";
+defparam \LED[2]~output .open_drain_output = "false";
+defparam \LED[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N19
+cyclonev_io_obuf \LED[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LED[3]),
+	.obar());
+// synopsys translate_off
+defparam \LED[3]~output .bus_hold = "false";
+defparam \LED[3]~output .open_drain_output = "false";
+defparam \LED[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y10_N96
+cyclonev_io_obuf \DRAM_CLK~output (
+	.i(\CLOCK_50~input_o ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_CLK),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_CLK~output .bus_hold = "false";
+defparam \DRAM_CLK~output .open_drain_output = "false";
+defparam \DRAM_CLK~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y12_N22
+cyclonev_io_obuf \DRAM_CKE~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_CKE),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_CKE~output .bus_hold = "false";
+defparam \DRAM_CKE~output .open_drain_output = "false";
+defparam \DRAM_CKE~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X44_Y0_N2
+cyclonev_io_obuf \DRAM_ADDR[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[0]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[0]~output .bus_hold = "false";
+defparam \DRAM_ADDR[0]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X32_Y0_N59
+cyclonev_io_obuf \DRAM_ADDR[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[1]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[1]~output .bus_hold = "false";
+defparam \DRAM_ADDR[1]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X2_Y61_N42
+cyclonev_io_obuf \DRAM_ADDR[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[2]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[2]~output .bus_hold = "false";
+defparam \DRAM_ADDR[2]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N2
+cyclonev_io_obuf \DRAM_ADDR[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[3]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[3]~output .bus_hold = "false";
+defparam \DRAM_ADDR[3]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y13_N56
+cyclonev_io_obuf \DRAM_ADDR[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[4]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[4]~output .bus_hold = "false";
+defparam \DRAM_ADDR[4]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y10_N62
+cyclonev_io_obuf \DRAM_ADDR[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[5]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[5]~output .bus_hold = "false";
+defparam \DRAM_ADDR[5]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y0_N19
+cyclonev_io_obuf \DRAM_ADDR[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[6]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[6]~output .bus_hold = "false";
+defparam \DRAM_ADDR[6]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y10_N45
+cyclonev_io_obuf \DRAM_ADDR[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[7]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[7]~output .bus_hold = "false";
+defparam \DRAM_ADDR[7]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X15_Y0_N53
+cyclonev_io_obuf \DRAM_ADDR[8]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[8]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[8]~output .bus_hold = "false";
+defparam \DRAM_ADDR[8]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[8]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X42_Y0_N19
+cyclonev_io_obuf \DRAM_ADDR[9]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[9]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[9]~output .bus_hold = "false";
+defparam \DRAM_ADDR[9]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[9]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X6_Y0_N19
+cyclonev_io_obuf \DRAM_ADDR[10]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[10]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[10]~output .bus_hold = "false";
+defparam \DRAM_ADDR[10]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[10]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N36
+cyclonev_io_obuf \DRAM_ADDR[11]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[11]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[11]~output .bus_hold = "false";
+defparam \DRAM_ADDR[11]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[11]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N2
+cyclonev_io_obuf \DRAM_ADDR[12]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_ADDR[12]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_ADDR[12]~output .bus_hold = "false";
+defparam \DRAM_ADDR[12]~output .open_drain_output = "false";
+defparam \DRAM_ADDR[12]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X4_Y61_N36
+cyclonev_io_obuf \DRAM_BA[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_BA[0]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_BA[0]~output .bus_hold = "false";
+defparam \DRAM_BA[0]~output .open_drain_output = "false";
+defparam \DRAM_BA[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X6_Y0_N2
+cyclonev_io_obuf \DRAM_BA[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_BA[1]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_BA[1]~output .bus_hold = "false";
+defparam \DRAM_BA[1]~output .open_drain_output = "false";
+defparam \DRAM_BA[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X42_Y0_N2
+cyclonev_io_obuf \DRAM_CS_N~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_CS_N),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_CS_N~output .bus_hold = "false";
+defparam \DRAM_CS_N~output .open_drain_output = "false";
+defparam \DRAM_CS_N~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X68_Y11_N5
+cyclonev_io_obuf \DRAM_CAS_N~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_CAS_N),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_CAS_N~output .bus_hold = "false";
+defparam \DRAM_CAS_N~output .open_drain_output = "false";
+defparam \DRAM_CAS_N~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X4_Y0_N36
+cyclonev_io_obuf \DRAM_RAS_N~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_RAS_N),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_RAS_N~output .bus_hold = "false";
+defparam \DRAM_RAS_N~output .open_drain_output = "false";
+defparam \DRAM_RAS_N~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X65_Y0_N19
+cyclonev_io_obuf \DRAM_WE_N~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_WE_N),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_WE_N~output .bus_hold = "false";
+defparam \DRAM_WE_N~output .open_drain_output = "false";
+defparam \DRAM_WE_N~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N53
+cyclonev_io_obuf \DRAM_DQM[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQM[0]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQM[0]~output .bus_hold = "false";
+defparam \DRAM_DQM[0]~output .open_drain_output = "false";
+defparam \DRAM_DQM[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X19_Y61_N53
+cyclonev_io_obuf \DRAM_DQM[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQM[1]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQM[1]~output .bus_hold = "false";
+defparam \DRAM_DQM[1]~output .open_drain_output = "false";
+defparam \DRAM_DQM[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X15_Y0_N19
+cyclonev_io_obuf \DRAM_DQ[0]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[0]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[0]~output .bus_hold = "false";
+defparam \DRAM_DQ[0]~output .open_drain_output = "true";
+defparam \DRAM_DQ[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y0_N42
+cyclonev_io_obuf \DRAM_DQ[1]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[1]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[1]~output .bus_hold = "false";
+defparam \DRAM_DQ[1]~output .open_drain_output = "true";
+defparam \DRAM_DQ[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X19_Y0_N36
+cyclonev_io_obuf \DRAM_DQ[2]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[2]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[2]~output .bus_hold = "false";
+defparam \DRAM_DQ[2]~output .open_drain_output = "true";
+defparam \DRAM_DQ[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X53_Y0_N36
+cyclonev_io_obuf \DRAM_DQ[3]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[3]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[3]~output .bus_hold = "false";
+defparam \DRAM_DQ[3]~output .open_drain_output = "true";
+defparam \DRAM_DQ[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N53
+cyclonev_io_obuf \DRAM_DQ[4]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[4]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[4]~output .bus_hold = "false";
+defparam \DRAM_DQ[4]~output .open_drain_output = "true";
+defparam \DRAM_DQ[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y0_N2
+cyclonev_io_obuf \DRAM_DQ[5]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[5]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[5]~output .bus_hold = "false";
+defparam \DRAM_DQ[5]~output .open_drain_output = "true";
+defparam \DRAM_DQ[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X12_Y0_N53
+cyclonev_io_obuf \DRAM_DQ[6]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[6]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[6]~output .bus_hold = "false";
+defparam \DRAM_DQ[6]~output .open_drain_output = "true";
+defparam \DRAM_DQ[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X42_Y0_N36
+cyclonev_io_obuf \DRAM_DQ[7]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[7]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[7]~output .bus_hold = "false";
+defparam \DRAM_DQ[7]~output .open_drain_output = "true";
+defparam \DRAM_DQ[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y0_N36
+cyclonev_io_obuf \DRAM_DQ[8]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[8]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[8]~output .bus_hold = "false";
+defparam \DRAM_DQ[8]~output .open_drain_output = "true";
+defparam \DRAM_DQ[8]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N53
+cyclonev_io_obuf \DRAM_DQ[9]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[9]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[9]~output .bus_hold = "false";
+defparam \DRAM_DQ[9]~output .open_drain_output = "true";
+defparam \DRAM_DQ[9]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N36
+cyclonev_io_obuf \DRAM_DQ[10]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[10]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[10]~output .bus_hold = "false";
+defparam \DRAM_DQ[10]~output .open_drain_output = "true";
+defparam \DRAM_DQ[10]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X12_Y0_N19
+cyclonev_io_obuf \DRAM_DQ[11]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[11]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[11]~output .bus_hold = "false";
+defparam \DRAM_DQ[11]~output .open_drain_output = "true";
+defparam \DRAM_DQ[11]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y0_N76
+cyclonev_io_obuf \DRAM_DQ[12]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[12]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[12]~output .bus_hold = "false";
+defparam \DRAM_DQ[12]~output .open_drain_output = "true";
+defparam \DRAM_DQ[12]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X59_Y0_N53
+cyclonev_io_obuf \DRAM_DQ[13]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[13]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[13]~output .bus_hold = "false";
+defparam \DRAM_DQ[13]~output .open_drain_output = "true";
+defparam \DRAM_DQ[13]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X4_Y61_N53
+cyclonev_io_obuf \DRAM_DQ[14]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[14]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[14]~output .bus_hold = "false";
+defparam \DRAM_DQ[14]~output .open_drain_output = "true";
+defparam \DRAM_DQ[14]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y61_N19
+cyclonev_io_obuf \DRAM_DQ[15]~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(DRAM_DQ[15]),
+	.obar());
+// synopsys translate_off
+defparam \DRAM_DQ[15]~output .bus_hold = "false";
+defparam \DRAM_DQ[15]~output .open_drain_output = "true";
+defparam \DRAM_DQ[15]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X68_Y10_N78
+cyclonev_io_ibuf \CLOCK_50~input (
+	.i(CLOCK_50),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\CLOCK_50~input_o ));
+// synopsys translate_off
+defparam \CLOCK_50~input .bus_hold = "false";
+defparam \CLOCK_50~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X64_Y0_N18
+cyclonev_io_ibuf \SW[0]~input (
+	.i(SW[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\SW[0]~input_o ));
+// synopsys translate_off
+defparam \SW[0]~input .bus_hold = "false";
+defparam \SW[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X61_Y0_N35
+cyclonev_io_ibuf \SW[1]~input (
+	.i(SW[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\SW[1]~input_o ));
+// synopsys translate_off
+defparam \SW[1]~input .bus_hold = "false";
+defparam \SW[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X46_Y0_N52
+cyclonev_io_ibuf \SW[2]~input (
+	.i(SW[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\SW[2]~input_o ));
+// synopsys translate_off
+defparam \SW[2]~input .bus_hold = "false";
+defparam \SW[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X17_Y0_N75
+cyclonev_io_ibuf \SW[3]~input (
+	.i(SW[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\SW[3]~input_o ));
+// synopsys translate_off
+defparam \SW[3]~input .bus_hold = "false";
+defparam \SW[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N1
+cyclonev_io_ibuf \KEY[0]~input (
+	.i(KEY[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[0]~input_o ));
+// synopsys translate_off
+defparam \KEY[0]~input .bus_hold = "false";
+defparam \KEY[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X15_Y0_N18
+cyclonev_io_ibuf \DRAM_DQ[0]~input (
+	.i(DRAM_DQ[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[0]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[0]~input .bus_hold = "false";
+defparam \DRAM_DQ[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N41
+cyclonev_io_ibuf \DRAM_DQ[1]~input (
+	.i(DRAM_DQ[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[1]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[1]~input .bus_hold = "false";
+defparam \DRAM_DQ[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X19_Y0_N35
+cyclonev_io_ibuf \DRAM_DQ[2]~input (
+	.i(DRAM_DQ[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[2]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[2]~input .bus_hold = "false";
+defparam \DRAM_DQ[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y0_N35
+cyclonev_io_ibuf \DRAM_DQ[3]~input (
+	.i(DRAM_DQ[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[3]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[3]~input .bus_hold = "false";
+defparam \DRAM_DQ[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X14_Y0_N52
+cyclonev_io_ibuf \DRAM_DQ[4]~input (
+	.i(DRAM_DQ[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[4]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[4]~input .bus_hold = "false";
+defparam \DRAM_DQ[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X46_Y0_N1
+cyclonev_io_ibuf \DRAM_DQ[5]~input (
+	.i(DRAM_DQ[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[5]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[5]~input .bus_hold = "false";
+defparam \DRAM_DQ[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N52
+cyclonev_io_ibuf \DRAM_DQ[6]~input (
+	.i(DRAM_DQ[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[6]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[6]~input .bus_hold = "false";
+defparam \DRAM_DQ[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X42_Y0_N35
+cyclonev_io_ibuf \DRAM_DQ[7]~input (
+	.i(DRAM_DQ[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[7]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[7]~input .bus_hold = "false";
+defparam \DRAM_DQ[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X46_Y0_N35
+cyclonev_io_ibuf \DRAM_DQ[8]~input (
+	.i(DRAM_DQ[8]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[8]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[8]~input .bus_hold = "false";
+defparam \DRAM_DQ[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X18_Y0_N52
+cyclonev_io_ibuf \DRAM_DQ[9]~input (
+	.i(DRAM_DQ[9]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[9]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[9]~input .bus_hold = "false";
+defparam \DRAM_DQ[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y0_N35
+cyclonev_io_ibuf \DRAM_DQ[10]~input (
+	.i(DRAM_DQ[10]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[10]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[10]~input .bus_hold = "false";
+defparam \DRAM_DQ[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N18
+cyclonev_io_ibuf \DRAM_DQ[11]~input (
+	.i(DRAM_DQ[11]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[11]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[11]~input .bus_hold = "false";
+defparam \DRAM_DQ[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X62_Y0_N75
+cyclonev_io_ibuf \DRAM_DQ[12]~input (
+	.i(DRAM_DQ[12]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[12]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[12]~input .bus_hold = "false";
+defparam \DRAM_DQ[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X59_Y0_N52
+cyclonev_io_ibuf \DRAM_DQ[13]~input (
+	.i(DRAM_DQ[13]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[13]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[13]~input .bus_hold = "false";
+defparam \DRAM_DQ[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y61_N52
+cyclonev_io_ibuf \DRAM_DQ[14]~input (
+	.i(DRAM_DQ[14]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[14]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[14]~input .bus_hold = "false";
+defparam \DRAM_DQ[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X21_Y61_N18
+cyclonev_io_ibuf \DRAM_DQ[15]~input (
+	.i(DRAM_DQ[15]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\DRAM_DQ[15]~input_o ));
+// synopsys translate_off
+defparam \DRAM_DQ[15]~input .bus_hold = "false";
+defparam \DRAM_DQ[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X2_Y57_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

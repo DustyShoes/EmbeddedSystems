@@ -1,0 +1,493 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CODE/Embedded Systems/Lab4SDRAM/simulation/modelsim
+vBoardConfigQsys_nios2_gen2_0_cpu
+Z1 !s110 1448900056
+!i10b 1
+!s100 2IbXnlL=INPeX>iI?:YEU2
+IMj]fY5011NZTZ@UBA0EnW2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1448898153
+Z4 8C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v
+Z5 FC:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v
+L0 2982
+Z6 OV;L;10.3d;59
+r1
+!s85 0
+31
+Z7 !s108 1448900056.143000
+Z8 !s107 C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules|C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules/BoardConfigQsys_nios2_gen2_0_cpu.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+C:/CODE/Embedded Systems/Lab4SDRAM/BoardConfigQsys/synthesis/submodules}
+n@board@config@qsys_nios2_gen2_0_cpu
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_avalon_reg
+R1
+!i10b 1
+!s100 >jTPN2TDU5HEcFHb0MJOj1
+IY_R:G[kPh:]K=[;O3iaAR2
+R2
+R0
+R3
+R4
+R5
+L0 2177
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_avalon_reg
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci
+R1
+!i10b 1
+!s100 J1BWd@f8KUen9`nQjhiH[3
+I5ObzbCM<EGXI<n[^]<UD@0
+R2
+R0
+R3
+R4
+R5
+L0 2510
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_break
+R1
+!i10b 1
+!s100 cDC>E@ChI5bNIJ9B[>`Q43
+I]k0=]d2ZCS8g[UU:=MFgB2
+R2
+R0
+R3
+R4
+R5
+L0 292
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_break
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+R1
+!i10b 1
+!s100 PHm]Ce4A0J_KjV9NgM1TD2
+IIP4@V05h^Xhe:4@<gTZHR0
+R2
+R0
+R3
+R4
+R5
+L0 1426
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+R1
+!i10b 1
+!s100 c@4fF17zR@8[YhR^Dc0Nm3
+I>5=@ZEMbfU]ozMoceZ]8m1
+R2
+R0
+R3
+R4
+R5
+L0 790
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_dbrk
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_debug
+R1
+!i10b 1
+!s100 d2gobnZoBOXIic08`6P?_2
+IPMK4zMTl:KiZE`XMKDLB;1
+R2
+R0
+R3
+R4
+R5
+L0 151
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_debug
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+R1
+!i10b 1
+!s100 :^C:FYkd:MBiVj?CVMYFe1
+Ii:KRkg@hi:G;TD=X1b40D2
+R2
+R0
+R3
+R4
+R5
+L0 1345
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_dtrace
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo
+R1
+!i10b 1
+!s100 ]a;7Mj@;olg2^`1T@fR>53
+IOEmL1;PnLI:U[@B_22TA@0
+R2
+R0
+R3
+R4
+R5
+L0 1585
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_fifo
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+R1
+!i10b 1
+!s100 3:[;:cb_zRcUf`j5IKaHA2
+I3dzQ=fFZRzkEEDbd4ck[:0
+R2
+R0
+R3
+R4
+R5
+L0 1539
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+R1
+!i10b 1
+!s100 ?YRW4<B_DRe0;_L<NfHRE3
+IJ<oae]j]Z]c1K>:14jc7N1
+R2
+R0
+R3
+R4
+R5
+L0 1497
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_im
+R1
+!i10b 1
+!s100 XK;>6TzQ_?76d0DZ3lMUZ1
+Ij9=cATPCemZPDGTJDGhCZ1
+R2
+R0
+R3
+R4
+R5
+L0 2092
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_im
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_itrace
+R1
+!i10b 1
+!s100 m:JnY_NjWz]?deS@1IYf43
+If[9bVOBkelhN>_P_7[N911
+R2
+R0
+R3
+R4
+R5
+L0 976
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_itrace
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_pib
+R1
+!i10b 1
+!s100 zhQS2M<h4I[NgOkM<94l@3
+IkQAW`cNXj>jbl<giQj2e[1
+R2
+R0
+R3
+R4
+R5
+L0 2070
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_pib
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+R1
+!i10b 1
+!s100 ZELBQS2ilRgN2VfF0QO3L3
+IefoNEjgmFo?4Aa8lJ=[aF2
+R2
+R0
+R3
+R4
+R5
+L0 1278
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_td_mode
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+R1
+!i10b 1
+!s100 cI4I]@F_Me^;_MF>1eVHE2
+IY_PDGdOcdE8lFENF0]O_82
+R2
+R0
+R3
+R4
+R5
+L0 584
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_oci_xbrk
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_ocimem
+R1
+!i10b 1
+!s100 S_LZjbC]WI4XEB@JD[JMl3
+IPmZe?WecloF6?0iY4e>Y03
+R2
+R0
+R3
+R4
+R5
+L0 2332
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_ocimem
+vBoardConfigQsys_nios2_gen2_0_cpu_nios2_performance_monitors
+R1
+!i10b 1
+!s100 _J77_Wo@<oTjFG>iAO3RK1
+I^j2>OHgoEahi3kzcm?Rcg2
+R2
+R0
+R3
+R4
+R5
+L0 2161
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_nios2_performance_monitors
+vBoardConfigQsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+R1
+!i10b 1
+!s100 LYJ1CXQN0b?S`a_@2>zjV1
+IBLdGf^?2al;`5hD>>mc^c0
+R2
+R0
+R3
+R4
+R5
+L0 2269
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_ociram_sp_ram_module
+vBoardConfigQsys_nios2_gen2_0_cpu_register_bank_a_module
+R1
+!i10b 1
+!s100 V<HdJof9Wzk;Zl=`L53:P3
+ISfzGbeRYT[o<H=U36VY`Z3
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_register_bank_a_module
+vBoardConfigQsys_nios2_gen2_0_cpu_register_bank_b_module
+R1
+!i10b 1
+!s100 VmX[URlIJKKlJZ65fjh0V1
+I71fbJBbcKkP[3T3nmze_f0
+R2
+R0
+R3
+R4
+R5
+L0 86
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@board@config@qsys_nios2_gen2_0_cpu_register_bank_b_module
+vlights
+R1
+!i10b 1
+!s100 eSkhNg_<IMIUC8X`FV25E2
+I_K9h31gQ8kaNdLHQ27;412
+R2
+R0
+w1448897520
+8C:/CODE/Embedded Systems/Lab4SDRAM/lights.v
+FC:/CODE/Embedded Systems/Lab4SDRAM/lights.v
+L0 8
+R6
+r1
+!s85 0
+31
+!s108 1448900055.925000
+!s107 C:/CODE/Embedded Systems/Lab4SDRAM/lights.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/CODE/Embedded Systems/Lab4SDRAM|C:/CODE/Embedded Systems/Lab4SDRAM/lights.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work {+incdir+C:/CODE/Embedded Systems/Lab4SDRAM}
